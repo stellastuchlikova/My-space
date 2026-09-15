@@ -323,6 +323,55 @@
             color: #fff;
         }
 
+        /* Social Networks Box */
+        .social-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+            margin-bottom: 8px;
+        }
+
+        .social-item {
+            background-color: #ffffff;
+            border: 1px solid #ff99cc;
+            border-radius: 4px;
+            padding: 6px 8px;
+            font-size: 11px;
+            font-weight: bold;
+            color: #990066;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .social-item:hover {
+            background-color: #ff007f;
+            color: #ffffff;
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 5px rgba(255, 0, 127, 0.3);
+        }
+
+        .social-share-btn {
+            width: 100%;
+            background: linear-gradient(180deg, #ff66cc 0%, #990066 100%);
+            color: white;
+            border: 1px solid #ff99cc;
+            padding: 6px;
+            font-size: 11px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            transition: background 0.2s ease;
+        }
+
+        .social-share-btn:hover {
+            background: linear-gradient(180deg, #ff00aa 0%, #cc0088 100%);
+        }
+
         /* Interests & Details */
         .info-table {
             width: 100%;
@@ -340,6 +389,216 @@
             color: #990066;
             width: 35%;
             background-color: #ffe6f0;
+        }
+
+        /* Interactive Interests Cards */
+        .interests-container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .interest-card {
+            background-color: #ffffff;
+            border: 1px solid #ffb6c1;
+            border-radius: 6px;
+            padding: 8px 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .interest-card:hover {
+            border-color: #ff0088;
+            background-color: #fff0f5;
+            transform: translateX(3px);
+            box-shadow: 0 2px 8px rgba(255, 0, 136, 0.2);
+        }
+
+        .interest-card-title {
+            font-weight: bold;
+            color: #990066;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .interest-card-snippet {
+            font-size: 10.5px;
+            color: #555;
+            margin-top: 4px;
+            line-height: 1.3;
+        }
+
+        .interest-click-badge {
+            font-size: 9px;
+            background-color: #ffe6f2;
+            color: #d81b60;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-weight: bold;
+            border: 1px solid #ff99cc;
+        }
+
+        /* Photo Album - Zážitky Box */
+        .experiences-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .experience-card {
+            background-color: #ffffff;
+            border: 2px solid #ff99cc;
+            border-radius: 6px;
+            padding: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .experience-card:hover {
+            border-color: #ff007f;
+            transform: scale(1.03);
+            box-shadow: 0 3px 10px rgba(255, 0, 127, 0.25);
+        }
+
+        .experience-img-frame {
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(135deg, #ffe6f0 0%, #ffccff 100%);
+            border: 1px solid #ffb6c1;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 6px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .experience-img-icon {
+            font-size: 38px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+        }
+
+        .experience-title {
+            font-size: 11px;
+            font-weight: bold;
+            color: #990066;
+            margin-bottom: 3px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .experience-date {
+            font-size: 9px;
+            color: #888;
+        }
+
+        /* Modal Popup Dialog */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(50, 0, 30, 0.65);
+            backdrop-filter: blur(3px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.25s ease, visibility 0.25s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-card {
+            background-color: #ffffff;
+            border: 3px double #990066;
+            box-shadow: 0 0 25px rgba(255, 0, 127, 0.5);
+            border-radius: 10px;
+            width: 480px;
+            max-width: 90%;
+            padding: 0;
+            overflow: hidden;
+            transform: scale(0.85);
+            transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+
+        .modal-overlay.active .modal-card {
+            transform: scale(1);
+        }
+
+        .modal-header {
+            background: linear-gradient(90deg, #ff007f 0%, #990066 100%);
+            color: #ffffff;
+            padding: 10px 15px;
+            font-weight: bold;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #660044;
+        }
+
+        .modal-close-btn {
+            background: #ffccff;
+            color: #990066;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            font-weight: bold;
+            font-size: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-close-btn:hover {
+            background: #ffffff;
+            color: #ff007f;
+        }
+
+        .modal-body {
+            padding: 15px;
+            font-size: 12px;
+            line-height: 1.5;
+            color: #333;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+
+        .modal-hero-box {
+            background: linear-gradient(135deg, #fff0f5 0%, #ffe6f2 100%);
+            border: 2px dashed #ff66cc;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .modal-hero-icon {
+            font-size: 55px;
+            margin-bottom: 5px;
+        }
+
+        .modal-hero-subtitle {
+            font-size: 11px;
+            color: #cc0088;
+            font-weight: bold;
         }
 
         /* Retro Music Player */
@@ -718,6 +977,34 @@
                 </div>
             </div>
 
+            <!-- Social Media Box (Propojení se světem) -->
+            <div class="box">
+                <div class="box-header">Propojení se světem 🌐✨</div>
+                <div class="box-body">
+                    <div class="social-grid">
+                        <a href="https://instagram.com" target="_blank" class="social-item">
+                            <span>📸</span> Instagram
+                        </a>
+                        <a href="https://tiktok.com" target="_blank" class="social-item">
+                            <span>🎵</span> TikTok
+                        </a>
+                        <a href="https://spotify.com" target="_blank" class="social-item">
+                            <span>🎧</span> Spotify
+                        </a>
+                        <a href="https://youtube.com" target="_blank" class="social-item">
+                            <span>🎬</span> YouTube
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="social-item">
+                            <span>🐦</span> Twitter / X
+                        </a>
+                        <a href="https://pinterest.com" target="_blank" class="social-item">
+                            <span>📌</span> Pinterest
+                        </a>
+                    </div>
+                    <button class="social-share-btn" onclick="copyProfileLink()">📋 Zkopírovat odkaz na profil Kiki</button>
+                </div>
+            </div>
+
             <!-- Details Box -->
             <div class="box">
                 <div class="box-header">Detaily o Kiki</div>
@@ -755,28 +1042,53 @@
                 </div>
             </div>
 
-            <!-- Interests Box -->
+            <!-- Interests Box (Interactive Clickable Cards) -->
             <div class="box">
-                <div class="box-header">Kikiiny Zájmy</div>
-                <div class="box-body" style="padding: 0;">
-                    <table class="info-table">
-                        <tr>
-                            <td class="label">Obecné:</td>
-                            <td>Zelí na všechny způsoby 🥬, tancování pod sluncem, zalévání písničkami.</td>
-                        </tr>
-                        <tr>
-                            <td class="label">Oblíbená Hudba:</td>
-                            <td>Cabbage EDM 🎧, Veggie Pop, Retro Disco, Kytičkový Beat 🎵</td>
-                        </tr>
-                        <tr>
-                            <td class="label">Oblíbené Jídlo:</td>
-                            <td>Kysané zelí, hlávkové zelí, zelný salát, zelná polévka! 🍲</td>
-                        </tr>
-                        <tr>
-                            <td class="label">Hrdinové:</td>
-                            <td>Královna Zelná Hlávka, DJ Kapusta, Sluníčko ☀️</td>
-                        </tr>
-                    </table>
+                <div class="box-header">Kikiiny Zájmy (Klikni pro detail!) 🌸</div>
+                <div class="box-body">
+                    <div class="interests-container">
+
+                        <div class="interest-card" onclick="openInterestModal(0)">
+                            <div class="interest-card-title">
+                                <span>🥬 Zelí & Gastronomie</span>
+                                <span class="interest-click-badge">Detail ✨</span>
+                            </div>
+                            <div class="interest-card-snippet">
+                                Vše o pěstování, kysání a recepty na to nejšťavnatější zelí...
+                            </div>
+                        </div>
+
+                        <div class="interest-card" onclick="openInterestModal(1)">
+                            <div class="interest-card-title">
+                                <span>💃 Tancování & Rytmus</span>
+                                <span class="interest-click-badge">Detail ✨</span>
+                            </div>
+                            <div class="interest-card-snippet">
+                                Zelný vír a tanec pod sluncem od rána do večera...
+                            </div>
+                        </div>
+
+                        <div class="interest-card" onclick="openInterestModal(2)">
+                            <div class="interest-card-title">
+                                <span>🎧 Cabbage EDM & Hudba</span>
+                                <span class="interest-click-badge">Detail ✨</span>
+                            </div>
+                            <div class="interest-card-snippet">
+                                Chytlavé zelný beaty od DJ Kapusty a retro 2000s disco...
+                            </div>
+                        </div>
+
+                        <div class="interest-card" onclick="openInterestModal(3)">
+                            <div class="interest-card-title">
+                                <span>☀️ Zahrádkářství & Příroda</span>
+                                <span class="interest-click-badge">Detail ✨</span>
+                            </div>
+                            <div class="interest-card-snippet">
+                                Zalévání písničkami, sluneční paprsky a povídání s motýly...
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
@@ -796,6 +1108,51 @@
                     <button class="player-btn" id="playBtn" onclick="togglePlay()">⏸ Pause</button>
                     <button class="player-btn" onclick="nextSong()">⏭ Next</button>
                     <button class="player-btn" onclick="toggleDance()">💃 Dance Sync</button>
+                </div>
+            </div>
+
+            <!-- Photo Album - Zážitky Box (Fotoalbum Kiki) -->
+            <div class="box">
+                <div class="box-header">📸 Zážitky ze života Kiki (Fotoalbum)</div>
+                <div class="box-body">
+                    <div style="font-size: 11px; color: #666; margin-bottom: 8px;">
+                        Klikni na foto pro zobrazení vzpomínky a příběhu v plné velikosti! 🌸✨
+                    </div>
+                    <div class="experiences-grid">
+
+                        <div class="experience-card" onclick="openExperienceModal(0)">
+                            <div class="experience-img-frame">
+                                <span class="experience-img-icon">🥬🏆</span>
+                            </div>
+                            <div class="experience-title">Obří zelná sklizeň</div>
+                            <div class="experience-date">12. Srpna 2008</div>
+                        </div>
+
+                        <div class="experience-card" onclick="openExperienceModal(1)">
+                            <div class="experience-img-frame">
+                                <span class="experience-img-icon">🎧🕺</span>
+                            </div>
+                            <div class="experience-title">Koncert DJ Kapusty</div>
+                            <div class="experience-date">24. Července 2008</div>
+                        </div>
+
+                        <div class="experience-card" onclick="openExperienceModal(2)">
+                            <div class="experience-img-frame">
+                                <span class="experience-img-icon">☀️🧺</span>
+                            </div>
+                            <div class="experience-title">Zahrádková párty</div>
+                            <div class="experience-date">5. Června 2008</div>
+                        </div>
+
+                        <div class="experience-card" onclick="openExperienceModal(3)">
+                            <div class="experience-img-frame">
+                                <span class="experience-img-icon">🌸👑</span>
+                            </div>
+                            <div class="experience-title">Sluneční festival</div>
+                            <div class="experience-date">18. Května 2008</div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
@@ -942,7 +1299,138 @@
     </div>
 </div>
 
+<!-- Reusable Modal Popup Element -->
+<div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
+    <div class="modal-card">
+        <div class="modal-header">
+            <span id="modalTitle">Detail</span>
+            <button class="modal-close-btn" onclick="closeModal()">✕</button>
+        </div>
+        <div class="modal-body" id="modalBody">
+            <!-- Dynamic Modal Content -->
+        </div>
+    </div>
+</div>
+
 <script>
+    // Data structures for Interests & Experiences Modal Details
+    const interestsData = [
+        {
+            title: "🥬 Zelí & Gastronomie",
+            icon: "🥬🍲✨",
+            subtitle: "Vše o pěstování, kysání a recepty na to nejsladší zelí!",
+            text: "Kiki miluje zelí v jakékoliv podobě! Od čerstvého chroupavého hlávkového zelí přes tradiční domáci kysané až po exotické zelné smoothie. Ráda zkouší nové recepty na zelné saláty s mrkví a celerem a pečlivě studuje tajemství pěstování obřích zelných hlávek na své zahrádce. Zelí je pro ni nejen nejoblíbenějším jídlem, ale hlavně nekonečným zdrojem radosti a skvělé energie!"
+        },
+        {
+            title: "💃 Tancování & Rytmus",
+            icon: "💃🌸🎶",
+            subtitle: "Zelný vír a tanec pod sluncem od rána do večera!",
+            text: "Když zní chytlavý rytmus, Kiki prostě nedokáže zůstat v klidu! Její legendární taneční prvek se jmenuje 'Zelný vír'. Tancuje od rána do večera na rozkvetlé louce, při zalévání svých záhonků i na pódia zelných festivalů. Svým radostným tancem šíří dobrou náladu, smích a pozitivní vibrace všude tam, kam vkročí."
+        },
+        {
+            title: "🎧 Cabbage EDM & Hudba",
+            icon: "🎧🎵🔥",
+            subtitle: "Chytlavé zelný beaty od DJ Kapusty a 2000s Retro Disco!",
+            text: "Kiki je vášnivou posluchačkou i sběratelkou hudby. Její srdce bije pro Cabbage EDM, Veggie Pop i klasické 2000s Retro Disco. Ve sluchátkách jí neustále hrají čerstvé stopy od DJ Kapusty a sama ráda skládá veselé chytlavé melodie na svém MySpace profilu. Hudba dodává jejímu tanci tu nejlepší šťávu!"
+        },
+        {
+            title: "☀️ Zahrádkářství & Příroda",
+            icon: "☀️🌻🦋",
+            subtitle: "Zalévání písničkami, sluneční paprsky a povídání s motýly!",
+            text: "Kiki tráví většinu krásných dní venku na své zelném políčku a v přírodě. Miluje čerstvý ranní vzduch, hřejivé sluneční paprsky a zalévání svých rostlinek veselými písničkami. Zjistila totiž, že když zelenině při zalévání zpívá a tancuje, zelenina i květiny rostou dvakrát rychleji a jsou o dost veselejší!"
+        }
+    ];
+
+    const experiencesData = [
+        {
+            title: "Obří zelná sklizeň 🥬🏆",
+            icon: "🥬👑✨",
+            date: "12. Srpna 2008",
+            subtitle: "Nejšťavnatější sklizeň sezóny 2008!",
+            text: "Dnes se na zelném políčku stal obrovský zázrak! Po třech měsících zalévání písničkami a tancování kolem záhonku vyrostla tato gigantická zelná hlávka vážící celých 10 kilogramů. Byla tak těžká, že mi s její sklizní musel pomáhat Pan Celer. Večer jsme uspořádali velký salátový večírek pro celou zahrádku!"
+        },
+        {
+            title: "Koncert DJ Kapusty 🎧🕺",
+            icon: "🎧🪩🎶",
+            date: "24. Července 2008",
+            subtitle: "Nezapomenutelná párty pod širým nebem!",
+            text: "DJ Kapusta to na letní scéně neuvěřitelně rozjel! Jeho nový track 'Zelný Banger 2000' přiměl k tanci i ty nejstydlivější květinky a zeleniny z celého okolí. Tancovala jsem v první řadě až do východu slunce a rozkopla svůj nový taneční rekrod!"
+        },
+        {
+            title: "Zahrádková párty ☀️🧺",
+            icon: "☀️🥗🥳",
+            date: "5. Června 2008",
+            subtitle: "Piknik a radovánky s Top 8 přáteli!",
+            text: "Uspořádala jsem velký Letní piknik na své rozkvetlé louce pro všechny své nejlepší kamarády! Slečna Brokolice přinesla osvěžující mátovou limonádu, Mrkvík upekl křupavý zelný koláč a tancovali jsme v kruhu za doprovodu cvrčků až do pozdního večera."
+        },
+        {
+            title: "Sluneční festival 2008 🌸👑",
+            icon: "🌸🏅✨",
+            date: "18. Května 2008",
+            subtitle: "První místo v soutěži o nejveselejší tancující kytičku!",
+            text: "Jeden z nejkrásnějších dnů mého života! Získala jsem zlatou korunku za nejlepší zelný tanec na velkém Slunečním festivalu. Všichni diváci nadšeně tleskali a házeli na pódium čerstvé zelný lístky. Zlatou trofej jsem vystavila hned u vstupu na políčko!"
+        }
+    ];
+
+    // Functions to handle Modals
+    function openModal(title, contentHtml) {
+        document.getElementById('modalTitle').innerText = title;
+        document.getElementById('modalBody').innerHTML = contentHtml;
+        document.getElementById('modalOverlay').classList.add('active');
+    }
+
+    function closeModal() {
+        document.getElementById('modalOverlay').classList.remove('active');
+    }
+
+    function handleOverlayClick(event) {
+        if (event.target.id === 'modalOverlay') {
+            closeModal();
+        }
+    }
+
+    // Escape key listener for Modal
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeModal();
+        }
+    });
+
+    function openInterestModal(index) {
+        const item = interestsData[index];
+        const content = `
+            <div class="modal-hero-box">
+                <div class="modal-hero-icon">${item.icon}</div>
+                <div class="modal-hero-subtitle">${item.subtitle}</div>
+            </div>
+            <p style="font-size: 12px; line-height: 1.6; color: #444;">${item.text}</p>
+        `;
+        openModal(item.title, content);
+    }
+
+    function openExperienceModal(index) {
+        const item = experiencesData[index];
+        const content = `
+            <div class="modal-hero-box">
+                <div class="modal-hero-icon">${item.icon}</div>
+                <div style="font-size: 10px; color: #888; margin-bottom: 2px;">📅 ${item.date}</div>
+                <div class="modal-hero-subtitle">${item.subtitle}</div>
+            </div>
+            <p style="font-size: 12px; line-height: 1.6; color: #444;">${item.text}</p>
+        `;
+        openModal(item.title, content);
+    }
+
+    // Function for Copying Profile Link
+    function copyProfileLink() {
+        const profileUrl = "http://www.myspace.com/kiki_zelna_kyticka";
+        navigator.clipboard.writeText(profileUrl).then(() => {
+            alert(" Odkaz na profil Kiki byl zkopírován do schránky! 🌸✨\n\nSdílej ho se svými přáteli!");
+        }).catch(() => {
+            alert("Odkaz na profil Kiki:\n" + profileUrl);
+        });
+    }
+
     // JavaScript Functionality for Interactive Dance Mode & Music Player
     let isDancing = false;
     let isPlaying = true;
