@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MySpace.com - Kiki (fialovo-růžová kytička) 🌸🥬</title>
+    <title>Kiki's Realm 🌸✨ | Fialovo-růžová Kytička & Zelný Svět</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Retro MySpace 2000s Aesthetic Styling */
+        :root {
+            --primary: #e6007e;
+            --primary-hover: #ff1a95;
+            --primary-light: #ffe6f3;
+            --secondary: #8e24aa;
+            --secondary-light: #f3e5f5;
+            --accent: #00e676;
+            --accent-dark: #1b5e20;
+            --bg-gradient: linear-gradient(135deg, #1f0824 0%, #3a0d3f 35%, #5c1349 70%, #2a082b 100%);
+            --card-bg: rgba(255, 255, 255, 0.92);
+            --card-glass: rgba(255, 255, 255, 0.15);
+            --text-main: #2d0c2e;
+            --text-muted: #6b4d6c;
+            --border-radius: 20px;
+            --box-shadow: 0 10px 30px rgba(142, 36, 170, 0.18);
+            --glow: 0 0 20px rgba(230, 0, 126, 0.4);
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -13,1494 +34,1774 @@
         }
 
         body {
-            background-color: #f7e8f6;
-            background-image:
-                radial-gradient(#ffb6c1 15%, transparent 16%),
-                radial-gradient(#dda0dd 15%, transparent 16%);
-            background-size: 30px 30px;
-            background-position: 0 0, 15px 15px;
-            font-family: "MS Sans Serif", Verdana, Arial, sans-serif;
-            font-size: 12px;
-            color: #333333;
-            padding: 15px 0;
-        }
-
-        a {
-            color: #990066;
-            text-decoration: underline;
-            font-weight: bold;
-        }
-
-        a:hover {
-            color: #ff007f;
-            text-decoration: none;
-        }
-
-        .container {
-            width: 820px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            border: 3px double #d2691e;
-            box-shadow: 0 0 15px rgba(153, 0, 102, 0.4);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        /* Top Bar & Navigation */
-        .top-navbar {
-            background: linear-gradient(180deg, #d87093 0%, #990066 100%);
-            color: #ffffff;
-            padding: 8px 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid #660044;
-        }
-
-        .top-navbar h1 {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            font-size: 22px;
-            letter-spacing: 1px;
-            color: #fff;
-            text-shadow: 2px 2px 0px #ff007f;
-        }
-
-        .nav-links {
-            font-size: 11px;
-        }
-
-        .nav-links a {
-            color: #ffffff;
-            margin: 0 6px;
-            text-decoration: none;
-        }
-
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
-
-        /* Search Sub-bar */
-        .sub-bar {
-            background-color: #ffccff;
-            border-bottom: 1px solid #dda0dd;
-            padding: 5px 15px;
-            font-size: 11px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .sub-bar input[type="text"] {
-            font-size: 11px;
-            padding: 2px 5px;
-            border: 1px solid #990066;
-        }
-
-        .sub-bar button {
-            background: #990066;
-            color: white;
-            border: none;
-            padding: 2px 8px;
-            cursor: pointer;
-            font-size: 11px;
-            border-radius: 3px;
-        }
-
-        /* Main Content Layout */
-        .main-layout {
-            display: flex;
-            padding: 15px;
-            gap: 15px;
-        }
-
-        .left-col {
-            width: 330px;
-        }
-
-        .right-col {
-            width: 440px;
-        }
-
-        /* Common Box Styles */
-        .box {
-            border: 2px solid #990066;
-            margin-bottom: 15px;
-            background-color: #fff0f5;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-
-        .box-header {
-            background: linear-gradient(90deg, #ff66cc 0%, #cc0088 100%);
-            color: #ffffff;
-            font-weight: bold;
-            padding: 5px 8px;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border-bottom: 1px solid #990066;
-        }
-
-        .box-body {
-            padding: 10px;
-        }
-
-        /* User Profile Header Left */
-        .user-title h2 {
-            font-size: 18px;
-            color: #990066;
-            margin-bottom: 4px;
-        }
-
-        .user-status {
-            font-style: italic;
-            color: #666;
-            margin-bottom: 10px;
-            font-size: 11px;
-        }
-
-        /* Character Box (Kiki) */
-        .character-card {
-            text-align: center;
-            background-color: #fff;
-            border: 2px dashed #ff0088;
-            padding: 10px;
-            border-radius: 8px;
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-main);
+            min-height: 100vh;
             position: relative;
+            overflow-x: hidden;
+            padding-bottom: 40px;
         }
 
-        .online-now {
-            color: #00aa00;
-            font-weight: bold;
-            font-size: 11px;
-            margin-top: 5px;
-            display: inline-block;
-        }
-
-        .online-dot {
-            height: 10px;
-            width: 10px;
-            background-color: #00ff00;
-            border-radius: 50%;
-            display: inline-block;
-            margin-right: 3px;
-            border: 1px solid #008800;
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(0.95); opacity: 0.8; }
-            50% { transform: scale(1.15); opacity: 1; }
-            100% { transform: scale(0.95); opacity: 0.8; }
-        }
-
-        /* Kiki SVG Container & Dance Animation */
-        .kiki-container {
-            width: 220px;
-            height: 230px;
-            margin: 10px auto;
-            position: relative;
-            cursor: pointer;
-        }
-
-        .kiki-svg {
-            width: 100%;
-            height: 100%;
-            transition: transform 0.3s ease;
-        }
-
-        /* Dancing state triggered by JS */
-        .dancing {
-            animation: dance 0.6s infinite alternate ease-in-out;
-        }
-
-        @keyframes dance {
-            0% {
-                transform: translateY(0px) rotate(-6deg) scale(1);
-            }
-            50% {
-                transform: translateY(-15px) rotate(0deg) scale(1.05);
-            }
-            100% {
-                transform: translateY(0px) rotate(6deg) scale(1);
-            }
-        }
-
-        .dance-btn {
-            background: linear-gradient(180deg, #ff3399 0%, #b30059 100%);
-            color: #ffffff;
-            border: 2px solid #ff99cc;
-            padding: 8px 16px;
-            font-size: 13px;
-            font-weight: bold;
-            border-radius: 20px;
-            cursor: pointer;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-            margin-top: 10px;
-            transition: all 0.2s ease;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-        }
-
-        .dance-btn:hover {
-            transform: scale(1.08);
-            background: linear-gradient(180deg, #ff66b2 0%, #e60073 100%);
-            box-shadow: 0 0 10px #ff00aa;
-        }
-
-        .dance-status-text {
-            font-weight: bold;
-            color: #cc0088;
-            margin-top: 6px;
-            font-size: 11px;
-            min-height: 16px;
-        }
-
-        /* Music Floating Notes Animation */
-        .music-notes {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            display: none;
-        }
-
-        .dancing-active .music-notes {
-            display: block;
-        }
-
-        .note {
-            position: absolute;
-            font-size: 20px;
-            color: #ff00aa;
-            animation: floatNote 2s infinite linear;
-            opacity: 0;
-        }
-
-        .note1 { left: 10%; animation-delay: 0s; }
-        .note2 { right: 10%; animation-delay: 0.7s; }
-        .note3 { left: 45%; animation-delay: 1.3s; }
-
-        @keyframes floatNote {
-            0% { transform: translateY(180px) scale(0.5); opacity: 1; }
-            100% { transform: translateY(10px) scale(1.3) rotate(20deg); opacity: 0; }
-        }
-
-        /* Extended Network Box */
-        .network-box {
-            border: 2px solid #ff66cc;
-            background-color: #fff;
-            padding: 8px;
-            text-align: center;
-            font-size: 11px;
-            margin-bottom: 15px;
-            border-radius: 4px;
-        }
-
-        /* Contact Box */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5px;
-            background-color: #ffe6f2;
-            padding: 8px;
-            border: 1px solid #ff99cc;
-        }
-
-        .contact-item {
-            background-color: #ffffff;
-            border: 1px solid #ffb6c1;
-            padding: 4px;
-            text-align: center;
-            font-size: 10px;
-            color: #990066;
-            cursor: pointer;
-        }
-
-        .contact-item:hover {
-            background-color: #ff3399;
-            color: #fff;
-        }
-
-        /* Social Networks Box */
-        .social-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6px;
-            margin-bottom: 8px;
-        }
-
-        .social-item {
-            background-color: #ffffff;
-            border: 1px solid #ff99cc;
-            border-radius: 4px;
-            padding: 6px 8px;
-            font-size: 11px;
-            font-weight: bold;
-            color: #990066;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            transition: all 0.2s ease;
-        }
-
-        .social-item:hover {
-            background-color: #ff007f;
-            color: #ffffff;
-            text-decoration: none;
-            transform: translateY(-2px);
-            box-shadow: 0 2px 5px rgba(255, 0, 127, 0.3);
-        }
-
-        .social-share-btn {
-            width: 100%;
-            background: linear-gradient(180deg, #ff66cc 0%, #990066 100%);
-            color: white;
-            border: 1px solid #ff99cc;
-            padding: 6px;
-            font-size: 11px;
-            font-weight: bold;
-            border-radius: 4px;
-            cursor: pointer;
-            text-align: center;
-            transition: background 0.2s ease;
-        }
-
-        .social-share-btn:hover {
-            background: linear-gradient(180deg, #ff00aa 0%, #cc0088 100%);
-        }
-
-        /* Interests & Details */
-        .info-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 11px;
-        }
-
-        .info-table td {
-            padding: 4px;
-            border-bottom: 1px dashed #ffb6c1;
-        }
-
-        .info-table td.label {
-            font-weight: bold;
-            color: #990066;
-            width: 35%;
-            background-color: #ffe6f0;
-        }
-
-        /* Interactive Interests Cards */
-        .interests-container {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .interest-card {
-            background-color: #ffffff;
-            border: 1px solid #ffb6c1;
-            border-radius: 6px;
-            padding: 8px 10px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            position: relative;
-        }
-
-        .interest-card:hover {
-            border-color: #ff0088;
-            background-color: #fff0f5;
-            transform: translateX(3px);
-            box-shadow: 0 2px 8px rgba(255, 0, 136, 0.2);
-        }
-
-        .interest-card-title {
-            font-weight: bold;
-            color: #990066;
-            font-size: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .interest-card-snippet {
-            font-size: 10.5px;
-            color: #555;
-            margin-top: 4px;
-            line-height: 1.3;
-        }
-
-        .interest-click-badge {
-            font-size: 9px;
-            background-color: #ffe6f2;
-            color: #d81b60;
-            padding: 2px 6px;
-            border-radius: 10px;
-            font-weight: bold;
-            border: 1px solid #ff99cc;
-        }
-
-        /* Photo Album - Zážitky Box */
-        .experiences-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-
-        .experience-card {
-            background-color: #ffffff;
-            border: 2px solid #ff99cc;
-            border-radius: 6px;
-            padding: 8px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .experience-card:hover {
-            border-color: #ff007f;
-            transform: scale(1.03);
-            box-shadow: 0 3px 10px rgba(255, 0, 127, 0.25);
-        }
-
-        .experience-img-frame {
-            width: 100%;
-            height: 100px;
-            background: linear-gradient(135deg, #ffe6f0 0%, #ffccff 100%);
-            border: 1px solid #ffb6c1;
-            border-radius: 4px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 6px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .experience-img-icon {
-            font-size: 38px;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
-        }
-
-        .experience-title {
-            font-size: 11px;
-            font-weight: bold;
-            color: #990066;
-            margin-bottom: 3px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .experience-date {
-            font-size: 9px;
-            color: #888;
-        }
-
-        /* Modal Popup Dialog */
-        .modal-overlay {
+        /* Glitter & Sparkle Canvas Background Overlay */
+        #glitterCanvas {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            background-color: rgba(50, 0, 30, 0.65);
-            backdrop-filter: blur(3px);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Main Container */
+        .app-container {
+            max-width: 1140px;
+            margin: 20px auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Modern Top Bar Navigation */
+        .navbar {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 24px;
+            padding: 14px 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Fredoka', cursive;
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffffff;
+            text-shadow: 0 0 12px rgba(255, 26, 149, 0.6);
+            text-decoration: none;
+        }
+
+        .brand-logo span {
+            display: inline-block;
+            animation: pulseGlow 2s infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% { transform: scale(1); filter: drop-shadow(0 0 2px #ff1a95); }
+            100% { transform: scale(1.15); filter: drop-shadow(0 0 10px #ff1a95); }
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-btn:hover {
+            background: var(--primary);
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(230, 0, 126, 0.4);
+            border-color: var(--primary);
+        }
+
+        /* Hero Header Banner */
+        .hero-banner {
+            background: linear-gradient(135deg, rgba(230, 0, 126, 0.85) 0%, rgba(142, 36, 170, 0.85) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: var(--border-radius);
+            padding: 24px 32px;
+            color: #ffffff;
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--glow), 0 12px 35px rgba(0,0,0,0.3);
+        }
+
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 60%);
+            animation: rotateShine 12s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes rotateShine {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .hero-title h1 {
+            font-family: 'Fredoka', cursive;
+            font-size: 32px;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hero-subtitle {
+            font-size: 15px;
+            opacity: 0.92;
+            font-weight: 500;
+        }
+
+        .status-badge {
+            background: rgba(0, 230, 118, 0.2);
+            border: 1px solid #00e676;
+            color: #b9f6ca;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(5px);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #00e676;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #00e676;
+            animation: blinkDot 1.5s infinite;
+        }
+
+        @keyframes blinkDot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.8); }
+        }
+
+        /* Layout Grid */
+        .layout-grid {
+            display: grid;
+            grid-template-columns: 360px 1fr;
+            gap: 24px;
+        }
+
+        @media (max-width: 900px) {
+            .layout-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Card Styling */
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 15px 35px rgba(142, 36, 170, 0.25);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-light);
+        }
+
+        .card-title {
+            font-family: 'Fredoka', cursive;
+            font-size: 18px;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Character Box & Interactive Dancing */
+        .character-card-body {
+            text-align: center;
+        }
+
+        .kiki-interactive-box {
+            position: relative;
+            width: 220px;
+            height: 230px;
+            margin: 0 auto 15px auto;
+            cursor: pointer;
+            filter: drop-shadow(0 8px 16px rgba(142, 36, 170, 0.25));
+            transition: transform 0.3s ease;
+        }
+
+        .kiki-interactive-box:hover {
+            transform: scale(1.04);
+        }
+
+        .kiki-svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .dancing {
+            animation: danceSmooth 0.7s infinite alternate cubic-bezier(0.45, 0.05, 0.55, 0.95);
+        }
+
+        @keyframes danceSmooth {
+            0% { transform: translateY(0) rotate(-7deg) scale(1); }
+            50% { transform: translateY(-16px) rotate(0deg) scale(1.06); }
+            100% { transform: translateY(0) rotate(7deg) scale(1); }
+        }
+
+        .action-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: #ffffff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-family: 'Fredoka', cursive;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(230, 0, 126, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .action-btn:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(230, 0, 126, 0.5);
+            background: linear-gradient(135deg, var(--primary-hover) 0%, #a020f0 100%);
+        }
+
+        /* Quick Action Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .contact-chip {
+            background: var(--primary-light);
+            border: 1px solid rgba(230, 0, 126, 0.2);
+            padding: 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--secondary);
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .contact-chip:hover {
+            background: var(--primary);
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(230, 0, 126, 0.3);
+        }
+
+        /* Social Networks Grid */
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .social-chip {
+            background: #ffffff;
+            border: 1px solid rgba(142, 36, 170, 0.15);
+            padding: 10px 14px;
+            border-radius: 14px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.25s ease;
+        }
+
+        .social-chip:hover {
+            background: var(--secondary-light);
+            border-color: var(--secondary);
+            transform: translateY(-2px);
+            color: var(--secondary);
+            box-shadow: 0 4px 12px rgba(142, 36, 170, 0.15);
+        }
+
+        /* Info Table */
+        .info-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 8px;
+            font-size: 12px;
+        }
+
+        .info-table td {
+            padding: 8px 12px;
+        }
+
+        .info-table td.label {
+            font-weight: 700;
+            color: var(--secondary);
+            width: 35%;
+            background: var(--secondary-light);
+            border-radius: 10px 0 0 10px;
+        }
+
+        .info-table td.val {
+            background: #ffffff;
+            border-radius: 0 10px 10px 0;
+            border: 1px solid #f0e0f2;
+            border-left: none;
+            font-weight: 500;
+        }
+
+        /* Interactive Interest Cards */
+        .interests-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .interest-item {
+            background: #ffffff;
+            border: 1px solid #f0d5f2;
+            border-radius: 14px;
+            padding: 12px 16px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .interest-item:hover {
+            border-color: var(--primary);
+            background: var(--primary-light);
+            transform: translateX(4px);
+            box-shadow: 0 4px 15px rgba(230, 0, 126, 0.15);
+        }
+
+        .interest-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            font-size: 13px;
+            color: var(--secondary);
+            margin-bottom: 4px;
+        }
+
+        .interest-item-desc {
+            font-size: 11px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* Music Player Styling */
+        .music-player-card {
+            background: linear-gradient(135deg, #1b0a26 0%, #3a0d42 100%);
+            color: #ffffff;
+            border-radius: var(--border-radius);
+            padding: 18px 22px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .player-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: 'Fredoka', cursive;
+            color: #ff66c4;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .song-screen {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 10px;
+            font-size: 12px;
+            overflow: hidden;
+            white-space: nowrap;
+            margin-bottom: 12px;
+            color: #00ffcc;
+            font-family: monospace;
+        }
+
+        .marquee-inner {
+            display: inline-block;
+            animation: marqueeText 10s linear infinite;
+        }
+
+        @keyframes marqueeText {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .player-btns {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .p-btn {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .p-btn:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+
+        /* Photo Album Gallery Grid with REAL Photos */
+        .photo-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        @media (max-width: 600px) {
+            .photo-gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .photo-card {
+            background: #ffffff;
+            border: 1px solid rgba(142, 36, 170, 0.15);
+            border-radius: 16px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .photo-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 12px 25px rgba(230, 0, 126, 0.25);
+            border-color: var(--primary);
+        }
+
+        .photo-thumb-wrap {
+            position: relative;
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+            background: #f3e5f5;
+        }
+
+        .photo-thumb-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .photo-card:hover .photo-thumb-wrap img {
+            transform: scale(1.1);
+        }
+
+        .photo-overlay-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            color: #ffffff;
+            font-size: 10px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
+        .photo-info {
+            padding: 12px;
+        }
+
+        .photo-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 2px;
+        }
+
+        .photo-date {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        /* Game Section - Kiki sbírá zelí */
+        .game-card {
+            background: linear-gradient(135deg, #ffffff 0%, #fff0f7 100%);
+            border: 2px solid var(--primary-hover);
+        }
+
+        .game-wrapper {
+            position: relative;
+            width: 100%;
+            background: #111d13;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .game-hud {
+            width: 100%;
+            background: #1b2e1e;
+            padding: 10px 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #ffffff;
+            font-family: 'Fredoka', cursive;
+            font-size: 14px;
+            border-bottom: 2px solid #2e4e32;
+        }
+
+        .hud-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hearts-container {
+            display: flex;
+            gap: 4px;
+            font-size: 18px;
+        }
+
+        #gameCanvas {
+            background: #233d27;
+            display: block;
+            width: 100%;
+            max-width: 600px;
+            height: 360px;
+            touch-action: none;
+        }
+
+        /* Mobile touch game controls */
+        .game-mobile-controls {
+            display: none;
+            grid-template-columns: repeat(3, 50px);
+            grid-template-rows: repeat(2, 50px);
+            gap: 8px;
+            margin-top: 12px;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .game-mobile-controls {
+                display: grid;
+            }
+        }
+
+        .touch-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .touch-btn:active {
+            background: var(--secondary);
+            transform: scale(0.95);
+        }
+
+        .game-overlay-screen {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 40px);
+            background: rgba(17, 29, 19, 0.9);
+            backdrop-filter: blur(6px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            z-index: 10;
+        }
+
+        .game-start-btn {
+            background: linear-gradient(135deg, #00e676 0%, #1b5e20 100%);
+            color: #ffffff;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-family: 'Fredoka', cursive;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 16px;
+            box-shadow: 0 0 20px rgba(0, 230, 118, 0.5);
+            transition: all 0.25s ease;
+        }
+
+        .game-start-btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 30px rgba(0, 230, 118, 0.8);
+        }
+
+        /* Modal Dialog Styling */
+        .modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(20, 5, 25, 0.75);
+            backdrop-filter: blur(8px);
             z-index: 9999;
             display: flex;
             align-items: center;
             justify-content: center;
             opacity: 0;
             visibility: hidden;
-            transition: opacity 0.25s ease, visibility 0.25s ease;
+            transition: all 0.3s ease;
+            padding: 20px;
         }
 
-        .modal-overlay.active {
+        .modal-backdrop.active {
             opacity: 1;
             visibility: visible;
         }
 
-        .modal-card {
-            background-color: #ffffff;
-            border: 3px double #990066;
-            box-shadow: 0 0 25px rgba(255, 0, 127, 0.5);
-            border-radius: 10px;
-            width: 480px;
-            max-width: 90%;
-            padding: 0;
+        .modal-dialog {
+            background: #ffffff;
+            border-radius: 24px;
+            max-width: 580px;
+            width: 100%;
             overflow: hidden;
-            transform: scale(0.85);
-            transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            transform: scale(0.9);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        .modal-overlay.active .modal-card {
+        .modal-backdrop.active .modal-dialog {
             transform: scale(1);
         }
 
-        .modal-header {
-            background: linear-gradient(90deg, #ff007f 0%, #990066 100%);
+        .modal-dialog-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: #ffffff;
-            padding: 10px 15px;
-            font-weight: bold;
-            font-size: 14px;
+            padding: 16px 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid #660044;
+            font-family: 'Fredoka', cursive;
+            font-size: 18px;
         }
 
-        .modal-close-btn {
-            background: #ffccff;
-            color: #990066;
-            border: 1px solid #fff;
+        .modal-close {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
-            width: 24px;
-            height: 24px;
-            font-weight: bold;
-            font-size: 12px;
             cursor: pointer;
+            font-size: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: background 0.2s;
         }
 
-        .modal-close-btn:hover {
-            background: #ffffff;
-            color: #ff007f;
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.4);
         }
 
-        .modal-body {
-            padding: 15px;
-            font-size: 12px;
-            line-height: 1.5;
-            color: #333;
-            max-height: 70vh;
+        .modal-dialog-body {
+            padding: 20px 24px;
+            max-height: 75vh;
             overflow-y: auto;
         }
 
-        .modal-hero-box {
-            background: linear-gradient(135deg, #fff0f5 0%, #ffe6f2 100%);
-            border: 2px dashed #ff66cc;
-            border-radius: 8px;
-            padding: 15px;
-            text-align: center;
-            margin-bottom: 12px;
+        .modal-img-preview {
+            width: 100%;
+            max-height: 320px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
         }
 
-        .modal-hero-icon {
-            font-size: 55px;
-            margin-bottom: 5px;
-        }
-
-        .modal-hero-subtitle {
-            font-size: 11px;
-            color: #cc0088;
-            font-weight: bold;
-        }
-
-        /* Retro Music Player */
-        .music-player {
-            background: linear-gradient(180deg, #444 0%, #111 100%);
-            color: #00ffcc;
-            padding: 10px;
-            border-radius: 6px;
-            border: 2px solid #ff00aa;
-            margin-bottom: 15px;
-            font-family: 'Courier New', Courier, monospace;
-        }
-
-        .player-title {
-            color: #ff66cc;
-            font-size: 11px;
-            font-weight: bold;
-            margin-bottom: 5px;
-            text-align: center;
-        }
-
-        .song-display {
-            background-color: #000;
-            border: 1px solid #00ffcc;
-            padding: 5px;
-            font-size: 11px;
-            text-align: center;
-            margin-bottom: 8px;
-            overflow: hidden;
-            white-space: nowrap;
-        }
-
-        .marquee-text {
-            display: inline-block;
-            animation: marquee 8s linear infinite;
-        }
-
-        @keyframes marquee {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-        }
-
-        .player-controls {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .player-btn {
-            background: #ff00aa;
-            color: white;
-            border: 1px solid #fff;
-            padding: 2px 8px;
-            font-size: 10px;
-            cursor: pointer;
-            border-radius: 3px;
-        }
-
-        .player-btn:hover {
-            background: #ff66cc;
-        }
-
-        /* Blurbs Section */
-        .blurb-title {
-            color: #ff007f;
-            font-weight: bold;
-            font-size: 12px;
-            margin-bottom: 4px;
-            border-bottom: 1px solid #ffb6c1;
-            padding-bottom: 2px;
-        }
-
-        .blurb-content {
-            margin-bottom: 12px;
-            line-height: 1.4;
-            font-size: 11px;
-        }
-
-        .cabbage-badge {
-            background-color: #e6ffe6;
-            border: 1px solid #2e8b57;
-            color: #006600;
-            padding: 6px;
-            border-radius: 5px;
-            margin: 8px 0;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        /* Top 8 Friends Grid */
-        .friends-header {
-            color: #990066;
-            font-weight: bold;
-            font-size: 13px;
-            margin-bottom: 8px;
-        }
-
+        /* Top 8 Friends */
         .friends-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 8px;
+            gap: 12px;
             text-align: center;
         }
 
+        @media (max-width: 480px) {
+            .friends-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         .friend-card {
-            background-color: #fff;
-            border: 1px solid #ffb6c1;
-            padding: 5px;
-            border-radius: 4px;
+            background: #ffffff;
+            border: 1px solid #f0e0f2;
+            border-radius: 14px;
+            padding: 10px;
+            transition: all 0.25s ease;
         }
 
         .friend-card:hover {
-            border-color: #ff0088;
-            transform: scale(1.03);
-        }
-
-        .friend-name {
-            font-size: 10px;
-            font-weight: bold;
-            color: #990066;
-            margin-top: 3px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            transform: translateY(-3px);
+            border-color: var(--primary);
+            box-shadow: 0 6px 15px rgba(230, 0, 126, 0.15);
         }
 
         .friend-avatar {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            background-color: #ffe6f0;
-            margin: 0 auto;
+            background: var(--primary-light);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 24px;
-            border: 2px solid #ff99cc;
+            margin: 0 auto 6px auto;
+            border: 2px solid var(--primary);
         }
 
-        /* Comments Section */
+        .friend-name {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        /* Comments List */
         .comment-item {
-            background-color: #ffffff;
-            border: 1px solid #ffb6c1;
-            padding: 8px;
-            margin-bottom: 8px;
-            border-radius: 4px;
+            background: #ffffff;
+            border: 1px solid #f0e0f2;
+            border-radius: 14px;
+            padding: 12px 16px;
+            margin-bottom: 10px;
             display: flex;
-            gap: 10px;
+            gap: 12px;
         }
 
-        .comment-author {
-            width: 70px;
-            text-align: center;
-            font-weight: bold;
-            color: #990066;
-            font-size: 10px;
-        }
-
-        .comment-avatar {
-            width: 45px;
-            height: 45px;
+        .comment-author-avatar {
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
-            background-color: #ffd1dc;
-            margin: 0 auto 3px auto;
+            background: var(--secondary-light);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 20px;
-            border: 1px solid #ff0088;
+            border: 1.5px solid var(--secondary);
+            flex-shrink: 0;
         }
 
-        .comment-text {
-            flex: 1;
-            font-size: 11px;
+        .comment-body {
+            font-size: 12px;
         }
 
-        .comment-date {
-            color: #888;
-            font-size: 9px;
-            margin-bottom: 3px;
+        .comment-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
         }
 
-        /* Footer */
+        .comment-name {
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .comment-time {
+            font-size: 10px;
+            color: var(--text-muted);
+        }
+
         .footer {
             text-align: center;
-            padding: 15px;
-            background-color: #ffccff;
-            border-top: 2px solid #990066;
-            font-size: 10px;
-            color: #660044;
-        }
-
-        /* Sparkles decoration */
-        .sparkle {
-            color: #ff007f;
-            display: inline-block;
-            animation: sparkleAnim 1s infinite alternate;
-        }
-
-        @keyframes sparkleAnim {
-            from { opacity: 0.3; transform: scale(0.8); }
-            to { opacity: 1; transform: scale(1.2); }
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 13px;
+            margin-top: 20px;
+            z-index: 2;
+            position: relative;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <!-- Top Navigation Bar -->
-    <div class="top-navbar">
-        <h1>MySpace.com | Kiki's Realm ✨</h1>
-        <div class="nav-links">
-            <a href="#">Domů</a> |
-            <a href="#">Hledat</a> |
-            <a href="#">Přátelé</a> |
-            <a href="#">Hudba</a> |
-            <a href="#">Blog</a> |
-            <a href="#">Odhlásit se</a>
-        </div>
-    </div>
+    <!-- Canvas for Floating Glitter / Sparkle Particles -->
+    <canvas id="glitterCanvas"></canvas>
 
-    <!-- Sub Search Bar -->
-    <div class="sub-bar">
-        <div><strong>MySpace URL:</strong> http://www.myspace.com/kiki_zelna_kyticka</div>
-        <div>
-            <input type="text" placeholder="Hledat na MySpace..." value="zelí & hudba">
-            <button onclick="alert('Kiki našla nejšťastnější zelí na světě! 🥬✨')">Hledat</button>
-        </div>
-    </div>
-
-    <!-- Main Layout -->
-    <div class="main-layout">
-
-        <!-- Left Column -->
-        <div class="left-col">
-
-            <!-- User Title & Status -->
-            <div class="user-title">
-                <h2>Kiki <span class="sparkle">🌸✨</span></h2>
-                <div class="user-status">"Usmívej se, tancuj a jez zelí každý den!" 🥬🎶</div>
+    <div class="app-container">
+        <!-- Modern Top Navbar -->
+        <nav class="navbar">
+            <a href="#" class="brand-logo">
+                <span>🌸</span> Kiki's Realm ✨
+            </a>
+            <div class="nav-links">
+                <a href="#photoAlbum" class="nav-btn">📸 Fotoalbum</a>
+                <a href="#gameSection" class="nav-btn">🎮 Hra Kiki</a>
+                <a href="#aboutSection" class="nav-btn">💖 O Kiki</a>
             </div>
+        </nav>
 
-            <!-- Character Profile Box -->
-            <div class="box">
-                <div class="box-body character-card" id="characterCard">
-                    <!-- Interactive Kiki SVG -->
-                    <div class="kiki-container" id="kikiContainer" title="Klikni na mě nebo zmáčkni tlačítko pro tanec!">
-                        <div class="music-notes">
-                            <span class="note note1">🎵</span>
-                            <span class="note note2">🎶</span>
-                            <span class="note note3">🎼</span>
+        <!-- Hero Header -->
+        <header class="hero-banner">
+            <div class="hero-title">
+                <h1>Kiki <span style="font-size: 28px;">🌸✨</span></h1>
+                <div class="hero-subtitle">"Usmívej se, tancuj a jez zelí každý den!" 🥬🎶</div>
+            </div>
+            <div class="status-badge">
+                <span class="status-dot"></span> ONLINE TERAZ
+            </div>
+        </header>
+
+        <!-- Main Content Layout -->
+        <main class="layout-grid">
+
+            <!-- Left Column -->
+            <aside class="left-col">
+
+                <!-- Interactive Kiki Character Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">🌸 Fialovo-růžová Kiki</div>
+                    </div>
+                    <div class="character-card-body">
+                        <div class="kiki-interactive-box" id="kikiBox" onclick="toggleDance()" title="Klikni na Kiki a roztancuj ji!">
+                            <svg class="kiki-svg" id="kikiSvg" viewBox="0 0 200 210" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <radialGradient id="pinkPetal" cx="50%" cy="50%" r="50%">
+                                        <stop offset="0%" stop-color="#ff99dd"/>
+                                        <stop offset="100%" stop-color="#d81b60"/>
+                                    </radialGradient>
+                                    <radialGradient id="purpleFace" cx="35%" cy="35%" r="65%">
+                                        <stop offset="0%" stop-color="#f3e5f5"/>
+                                        <stop offset="50%" stop-color="#ce93d8"/>
+                                        <stop offset="100%" stop-color="#8e24aa"/>
+                                    </radialGradient>
+                                    <radialGradient id="cabbageGrad" cx="40%" cy="40%" r="60%">
+                                        <stop offset="0%" stop-color="#b9f6ca"/>
+                                        <stop offset="70%" stop-color="#00e676"/>
+                                        <stop offset="100%" stop-color="#1b5e20"/>
+                                    </radialGradient>
+                                </defs>
+
+                                <path d="M100 140 Q 95 185 85 200 Q 115 185 100 140 Z" fill="#2e7d32" stroke="#1b5e20" stroke-width="2"/>
+
+                                <g id="arms">
+                                    <path d="M 60 125 Q 30 110 35 90" fill="none" stroke="#d81b60" stroke-width="6" stroke-linecap="round"/>
+                                    <circle cx="35" cy="90" r="5" fill="#ff80ab"/>
+                                    <path d="M 140 125 Q 170 110 165 90" fill="none" stroke="#d81b60" stroke-width="6" stroke-linecap="round"/>
+                                    <circle cx="165" cy="90" r="5" fill="#ff80ab"/>
+                                </g>
+
+                                <g id="petals">
+                                    <circle cx="100" cy="45" r="26" fill="url(#pinkPetal)"/>
+                                    <circle cx="138" cy="60" r="26" fill="url(#pinkPetal)"/>
+                                    <circle cx="152" cy="98" r="26" fill="url(#pinkPetal)"/>
+                                    <circle cx="138" cy="136" r="26" fill="url(#pinkPetal)"/>
+                                    <circle cx="100" cy="150" r="26" fill="url(#pinkPetal)"/>
+                                    <circle cx="62" cy="136" r="26" fill="url(#pinkPetal)"/>
+                                    <circle cx="48" cy="98" r="26" fill="url(#pinkPetal)"/>
+                                    <circle cx="62" cy="60" r="26" fill="url(#pinkPetal)"/>
+                                </g>
+
+                                <circle cx="100" cy="98" r="46" fill="url(#purpleFace)" stroke="#6a1b9a" stroke-width="2.5"/>
+
+                                <path d="M 85 56 Q 92 38 100 52 Q 108 38 115 56 Z" fill="#ff4081" stroke="#c2185b" stroke-width="1.5"/>
+                                <path d="M 92 56 Q 100 42 108 56 Z" fill="#ff80ab"/>
+
+                                <g id="eyes">
+                                    <ellipse cx="83" cy="90" rx="8.5" ry="11" fill="#212121"/>
+                                    <ellipse cx="80.5" cy="86" rx="3.5" ry="4.5" fill="#ffffff"/>
+                                    <circle cx="85" cy="93" r="1.8" fill="#ffffff"/>
+
+                                    <ellipse cx="117" cy="90" rx="8.5" ry="11" fill="#212121"/>
+                                    <ellipse cx="114.5" cy="86" rx="3.5" ry="4.5" fill="#ffffff"/>
+                                    <circle cx="119" cy="93" r="1.8" fill="#ffffff"/>
+
+                                    <path d="M 75 83 Q 73 78 70 80" fill="none" stroke="#212121" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M 80 80 Q 79 75 77 76" fill="none" stroke="#212121" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M 125 83 Q 127 78 130 80" fill="none" stroke="#212121" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M 120 80 Q 121 75 123 76" fill="none" stroke="#212121" stroke-width="2" stroke-linecap="round"/>
+                                </g>
+
+                                <ellipse cx="72" cy="103" rx="7" ry="4" fill="#ff4081" opacity="0.65"/>
+                                <ellipse cx="128" cy="103" rx="7" ry="4" fill="#ff4081" opacity="0.65"/>
+
+                                <path d="M 84 105 Q 100 126 116 105" fill="#d81b60" stroke="#880e4f" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M 92 113 Q 100 122 108 113 Q 100 120 92 113" fill="#ff80ab"/>
+
+                                <path d="M 52 95 A 50 50 0 0 1 148 95" fill="none" stroke="#ff007f" stroke-width="4"/>
+                                <rect x="46" y="88" width="10" height="20" rx="4" fill="#990066"/>
+                                <rect x="144" y="88" width="10" height="20" rx="4" fill="#990066"/>
+
+                                <g id="cabbage" transform="translate(135, 135) scale(0.75)">
+                                    <circle cx="20" cy="20" r="18" fill="url(#cabbageGrad)" stroke="#1b5e20" stroke-width="2"/>
+                                    <text x="20" y="24" font-size="14" text-anchor="middle">🥬</text>
+                                </g>
+                            </svg>
                         </div>
-
-                        <!-- Kiki SVG Graphic -->
-                        <svg class="kiki-svg" id="kikiSvg" viewBox="0 0 200 210" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <radialGradient id="pinkPetal" cx="50%" cy="50%" r="50%">
-                                    <stop offset="0%" stop-color="#ff99dd"/>
-                                    <stop offset="100%" stop-color="#d81b60"/>
-                                </radialGradient>
-                                <radialGradient id="purpleFace" cx="35%" cy="35%" r="65%">
-                                    <stop offset="0%" stop-color="#f3e5f5"/>
-                                    <stop offset="50%" stop-color="#ce93d8"/>
-                                    <stop offset="100%" stop-color="#8e24aa"/>
-                                </radialGradient>
-                                <radialGradient id="cabbageGrad" cx="40%" cy="40%" r="60%">
-                                    <stop offset="0%" stop-color="#b9f6ca"/>
-                                    <stop offset="70%" stop-color="#00e676"/>
-                                    <stop offset="100%" stop-color="#1b5e20"/>
-                                </radialGradient>
-                            </defs>
-
-                            <!-- Stem / Body Leaf -->
-                            <path d="M100 140 Q 95 185 85 200 Q 115 185 100 140 Z" fill="#2e7d32" stroke="#1b5e20" stroke-width="2"/>
-
-                            <!-- Dancing Arms -->
-                            <g id="arms">
-                                <path d="M 60 125 Q 30 110 35 90" fill="none" stroke="#d81b60" stroke-width="6" stroke-linecap="round"/>
-                                <circle cx="35" cy="90" r="5" fill="#ff80ab"/>
-                                <path d="M 140 125 Q 170 110 165 90" fill="none" stroke="#d81b60" stroke-width="6" stroke-linecap="round"/>
-                                <circle cx="165" cy="90" r="5" fill="#ff80ab"/>
-                            </g>
-
-                            <!-- Flower Petals (Fialovo-růžové okvětní lístky) -->
-                            <g id="petals">
-                                <circle cx="100" cy="45" r="26" fill="url(#pinkPetal)"/>
-                                <circle cx="138" cy="60" r="26" fill="url(#pinkPetal)"/>
-                                <circle cx="152" cy="98" r="26" fill="url(#pinkPetal)"/>
-                                <circle cx="138" cy="136" r="26" fill="url(#pinkPetal)"/>
-                                <circle cx="100" cy="150" r="26" fill="url(#pinkPetal)"/>
-                                <circle cx="62" cy="136" r="26" fill="url(#pinkPetal)"/>
-                                <circle cx="48" cy="98" r="26" fill="url(#pinkPetal)"/>
-                                <circle cx="62" cy="60" r="26" fill="url(#pinkPetal)"/>
-                            </g>
-
-                            <!-- Center Flower Face (Purple Face) -->
-                            <circle cx="100" cy="98" r="46" fill="url(#purpleFace)" stroke="#6a1b9a" stroke-width="2.5"/>
-
-                            <!-- Stylish Hair / Cute Tuft of Hair on top -->
-                            <path d="M 85 56 Q 92 38 100 52 Q 108 38 115 56 Z" fill="#ff4081" stroke="#c2185b" stroke-width="1.5"/>
-                            <path d="M 92 56 Q 100 42 108 56 Z" fill="#ff80ab"/>
-
-                            <!-- Big Cute Eyes with shine -->
-                            <g id="eyes">
-                                <!-- Left Eye -->
-                                <ellipse cx="83" cy="90" rx="8.5" ry="11" fill="#212121"/>
-                                <ellipse cx="80.5" cy="86" rx="3.5" ry="4.5" fill="#ffffff"/>
-                                <circle cx="85" cy="93" r="1.8" fill="#ffffff"/>
-
-                                <!-- Right Eye -->
-                                <ellipse cx="117" cy="90" rx="8.5" ry="11" fill="#212121"/>
-                                <ellipse cx="114.5" cy="86" rx="3.5" ry="4.5" fill="#ffffff"/>
-                                <circle cx="119" cy="93" r="1.8" fill="#ffffff"/>
-
-                                <!-- Eyelashes -->
-                                <path d="M 75 83 Q 73 78 70 80" fill="none" stroke="#212121" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M 80 80 Q 79 75 77 76" fill="none" stroke="#212121" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M 125 83 Q 127 78 130 80" fill="none" stroke="#212121" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M 120 80 Q 121 75 123 76" fill="none" stroke="#212121" stroke-width="2" stroke-linecap="round"/>
-                            </g>
-
-                            <!-- Rosy Cheeks -->
-                            <ellipse cx="72" cy="103" rx="7" ry="4" fill="#ff4081" opacity="0.65"/>
-                            <ellipse cx="128" cy="103" rx="7" ry="4" fill="#ff4081" opacity="0.65"/>
-
-                            <!-- Big Happy Smile (Usmívající se kytička) -->
-                            <path d="M 84 105 Q 100 126 116 105" fill="#d81b60" stroke="#880e4f" stroke-width="2" stroke-linecap="round"/>
-                            <!-- Tongue -->
-                            <path d="M 92 113 Q 100 122 108 113 Q 100 120 92 113" fill="#ff80ab"/>
-
-                            <!-- Headphones for Music Lover -->
-                            <path d="M 52 95 A 50 50 0 0 1 148 95" fill="none" stroke="#ff007f" stroke-width="4"/>
-                            <rect x="46" y="88" width="10" height="20" rx="4" fill="#990066"/>
-                            <rect x="144" y="88" width="10" height="20" rx="4" fill="#990066"/>
-
-                            <!-- Cute Cabbage (Zelí) Next to Kiki -->
-                            <g id="cabbage" transform="translate(135, 135) scale(0.75)">
-                                <circle cx="20" cy="20" r="18" fill="url(#cabbageGrad)" stroke="#1b5e20" stroke-width="2"/>
-                                <path d="M 8 18 Q 20 8 32 18" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.8"/>
-                                <path d="M 5 25 Q 20 35 35 25" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.8"/>
-                                <path d="M 18 5 Q 28 20 18 35" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.8"/>
-                                <text x="20" y="23" font-size="10" text-anchor="middle" fill="#004d40" font-weight="bold">🥬</text>
-                            </g>
-                        </svg>
+                        <button class="action-btn" id="danceBtn" onclick="toggleDance()">💃 Spustit Tanec Kiki ✨</button>
                     </div>
-
-                    <div><span class="online-dot"></span><span class="online-now">ONLINE TERAZ!</span></div>
-                    <div style="font-size: 11px; margin-top: 4px; color: #555;">Fialovo-růžová kytička 🌸</div>
-
-                    <!-- Dance Interactive Button -->
-                    <button class="dance-btn" id="danceBtn" onclick="toggleDance()">💃 Zapnout Tanec Kiki! 🎶</button>
-                    <div class="dance-status-text" id="danceStatus">Klikni a sleduj, jak Kiki tancuje!</div>
                 </div>
-            </div>
 
-            <!-- Extended Network Banner -->
-            <div class="network-box">
-                <strong>Kiki je ve vaší rozšířené síti!</strong><br>
-                Šiřte radost, hudbu a zelí po celém internetu.
-            </div>
-
-            <!-- Contact Box -->
-            <div class="box">
-                <div class="box-header">Kontaktovat Kiki</div>
-                <div class="box-body" style="padding: 5px;">
+                <!-- Quick Actions -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">💌 Rychlá Akce</div>
+                    </div>
                     <div class="contact-grid">
-                        <div class="contact-item" onclick="alert('Zpráva odeslána Kiki! 💌')">✉️ Poslat zprávu</div>
-                        <div class="contact-item" onclick="alert('Kiki tě přidala do přátel! 🌸')">➕ Přidat do přátel</div>
-                        <div class="contact-item" onclick="alert('Přidáno do oblíbených! ⭐')">⭐ Přidat k oblíbeným</div>
-                        <div class="contact-item" onclick="alert('Odesláno kamarádům! 🚀')">➡️ Přeposlat příteli</div>
-                        <div class="contact-item" onclick="toggleDance()">🎵 Zatančit si s Kiki</div>
-                        <div class="contact-item" onclick="alert('Kiki ti poslala čerstvé zelí! 🥬')">🥬 Darovat zelí</div>
+                        <div class="contact-chip" onclick="alert('Zpráva odeslána Kiki! 💌')">✉️ Zpráva</div>
+                        <div class="contact-chip" onclick="alert('Kiki tě přidala do přátel! 🌸')">➕ Přidat</div>
+                        <div class="contact-chip" onclick="alert('Kiki ti poslala čerstvé zelí! 🥬')">🥬 Zelíčko</div>
+                        <div class="contact-chip" onclick="copyProfileLink()">📋 Odkaz</div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Social Media Box (Propojení se světem) -->
-            <div class="box">
-                <div class="box-header">Propojení se světem 🌐✨</div>
-                <div class="box-body">
+                <!-- Social Links -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">🌐 Sociální Sítě</div>
+                    </div>
                     <div class="social-grid">
-                        <a href="https://instagram.com" target="_blank" class="social-item">
-                            <span>📸</span> Instagram
-                        </a>
-                        <a href="https://tiktok.com" target="_blank" class="social-item">
-                            <span>🎵</span> TikTok
-                        </a>
-                        <a href="https://spotify.com" target="_blank" class="social-item">
-                            <span>🎧</span> Spotify
-                        </a>
-                        <a href="https://youtube.com" target="_blank" class="social-item">
-                            <span>🎬</span> YouTube
-                        </a>
-                        <a href="https://twitter.com" target="_blank" class="social-item">
-                            <span>🐦</span> Twitter / X
-                        </a>
-                        <a href="https://pinterest.com" target="_blank" class="social-item">
-                            <span>📌</span> Pinterest
-                        </a>
+                        <a href="https://instagram.com" target="_blank" class="social-chip">📸 Instagram</a>
+                        <a href="https://tiktok.com" target="_blank" class="social-chip">🎵 TikTok</a>
+                        <a href="https://spotify.com" target="_blank" class="social-chip">🎧 Spotify</a>
+                        <a href="https://youtube.com" target="_blank" class="social-chip">🎬 YouTube</a>
                     </div>
-                    <button class="social-share-btn" onclick="copyProfileLink()">📋 Zkopírovat odkaz na profil Kiki</button>
                 </div>
-            </div>
 
-            <!-- Details Box -->
-            <div class="box">
-                <div class="box-header">Detaily o Kiki</div>
-                <div class="box-body" style="padding: 0;">
+                <!-- Profile Info Table -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">📋 Detaily o Kiki</div>
+                    </div>
                     <table class="info-table">
                         <tr>
                             <td class="label">Stav:</td>
-                            <td>Šťastná & Tancující 💃</td>
-                        </tr>
-                        <tr>
-                            <td class="label">Znamení:</td>
-                            <td>Rozkvetlé Zelí 🥦✨</td>
+                            <td class="val">Šťastná & Tancující 💃</td>
                         </tr>
                         <tr>
                             <td class="label">Bydliště:</td>
-                            <td>Zelná Zahrádka 🏡🥬</td>
-                        </tr>
-                        <tr>
-                            <td class="label">Vlasy:</td>
-                            <td>Růžová čupřinka 💇‍♀️</td>
-                        </tr>
-                        <tr>
-                            <td class="label">Oči:</td>
-                            <td>Velké veselé jiskřičky 👁️✨</td>
+                            <td class="val">Zelná Zahrádka 🏡🥬</td>
                         </tr>
                         <tr>
                             <td class="label">Barva:</td>
-                            <td>Fialovo-růžová (Purple & Pink) 💖💜</td>
+                            <td class="val">Fialovo-růžová 💖💜</td>
                         </tr>
                         <tr>
-                            <td class="label">Pohlaví:</td>
-                            <td>Kytičkový charakter 🌸</td>
+                            <td class="label">Jídlo:</td>
+                            <td class="val">Čerstvé Kysané Zelí 🥬</td>
                         </tr>
                     </table>
                 </div>
-            </div>
 
-            <!-- Interests Box (Interactive Clickable Cards) -->
-            <div class="box">
-                <div class="box-header">Kikiiny Zájmy (Klikni pro detail!) 🌸</div>
-                <div class="box-body">
-                    <div class="interests-container">
-
-                        <div class="interest-card" onclick="openInterestModal(0)">
-                            <div class="interest-card-title">
+                <!-- Interests -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">✨ Zájmy & Záliby</div>
+                    </div>
+                    <div class="interests-list">
+                        <div class="interest-item" onclick="openInterestModal(0)">
+                            <div class="interest-item-header">
                                 <span>🥬 Zelí & Gastronomie</span>
-                                <span class="interest-click-badge">Detail ✨</span>
+                                <span>✨</span>
                             </div>
-                            <div class="interest-card-snippet">
-                                Vše o pěstování, kysání a recepty na to nejšťavnatější zelí...
-                            </div>
+                            <div class="interest-item-desc">Vše o pěstování, kysání a recepty na to nejšťavnatější zelí...</div>
                         </div>
 
-                        <div class="interest-card" onclick="openInterestModal(1)">
-                            <div class="interest-card-title">
+                        <div class="interest-item" onclick="openInterestModal(1)">
+                            <div class="interest-item-header">
                                 <span>💃 Tancování & Rytmus</span>
-                                <span class="interest-click-badge">Detail ✨</span>
+                                <span>✨</span>
                             </div>
-                            <div class="interest-card-snippet">
-                                Zelný vír a tanec pod sluncem od rána do večera...
-                            </div>
+                            <div class="interest-item-desc">Zelný vír a tanec pod sluncem od rána do večera...</div>
                         </div>
 
-                        <div class="interest-card" onclick="openInterestModal(2)">
-                            <div class="interest-card-title">
+                        <div class="interest-item" onclick="openInterestModal(2)">
+                            <div class="interest-item-header">
                                 <span>🎧 Cabbage EDM & Hudba</span>
-                                <span class="interest-click-badge">Detail ✨</span>
+                                <span>✨</span>
                             </div>
-                            <div class="interest-card-snippet">
-                                Chytlavé zelný beaty od DJ Kapusty a retro 2000s disco...
+                            <div class="interest-item-desc">Chytlavé zelný beaty od DJ Kapusty a retro disco...</div>
+                        </div>
+                    </div>
+                </div>
+
+            </aside>
+
+            <!-- Right Column -->
+            <section class="right-col">
+
+                <!-- Music Player -->
+                <div class="music-player-card">
+                    <div class="player-header">
+                        <span>🎵 KIKI'S MUSIC PLAYER</span>
+                        <span>✨ STEREO</span>
+                    </div>
+                    <div class="song-screen">
+                        <div class="marquee-inner" id="songTitle">▶ Hraje: DJ Kiki - Zelný Banger 2000 (Dancing Mix) [3:42] 🥬🎶</div>
+                    </div>
+                    <div class="player-btns">
+                        <button class="p-btn" onclick="prevSong()">⏮ Předchozí</button>
+                        <button class="p-btn" id="playBtn" onclick="togglePlay()">⏸ Pauza</button>
+                        <button class="p-btn" onclick="nextSong()">⏭ Další</button>
+                    </div>
+                </div>
+
+                <!-- GAME SECTION: Kiki sbírá zelí -->
+                <div class="card game-card" id="gameSection">
+                    <div class="card-header">
+                        <div class="card-title">🎮 Minihra: Kiki sbírá zelí! 🥬</div>
+                    </div>
+                    <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 14px;">
+                        Pohybuj Kiki pomocí <strong>Šipek / WASD</strong> (nebo tlačítky na mobilu). Sbírej zelí 🥬, získávej body a vyhýbej se broukům 🪲! Brouky můžeš zneškodnit kliknutím na ně!
+                    </p>
+
+                    <div class="game-wrapper">
+                        <!-- Game HUD Screen -->
+                        <div class="game-hud">
+                            <div class="hud-item">
+                                <span>Životy:</span>
+                                <div class="hearts-container" id="heartsContainer">❤️❤️❤️</div>
+                            </div>
+                            <div class="hud-item">
+                                <span>Skóre: <strong id="scoreVal" style="color: #00e676;">0</strong></span>
+                            </div>
+                            <div class="hud-item">
+                                <span>Rekord: <strong id="highScoreVal" style="color: #ff99dd;">0</strong></span>
                             </div>
                         </div>
 
-                        <div class="interest-card" onclick="openInterestModal(3)">
-                            <div class="interest-card-title">
-                                <span>☀️ Zahrádkářství & Příroda</span>
-                                <span class="interest-click-badge">Detail ✨</span>
+                        <!-- Canvas -->
+                        <canvas id="gameCanvas" width="600" height="360"></canvas>
+
+                        <!-- Start / Game Over Overlay -->
+                        <div class="game-overlay-screen" id="gameOverlay">
+                            <h2 id="overlayTitle" style="font-family: 'Fredoka', cursive; font-size: 26px; color: #00e676;">Kiki sbírá zelí 🥬✨</h2>
+                            <p id="overlayDesc" style="font-size: 13px; margin-top: 8px; max-width: 80%;">
+                                Nasbírej co nejvíce čerstvého zelí! Pozor na škůdce (brouky a housenky). Máš 3 životy.
+                            </p>
+                            <button class="game-start-btn" onclick="startGame()">▶ Spustit Hru!</button>
+                        </div>
+                    </div>
+
+                    <!-- Touch Controls for Mobile -->
+                    <div class="game-mobile-controls">
+                        <div></div>
+                        <button class="touch-btn" ontouchstart="handleTouch('up', event)" onmousedown="handleTouch('up', event)">▲</button>
+                        <div></div>
+                        <button class="touch-btn" ontouchstart="handleTouch('left', event)" onmousedown="handleTouch('left', event)">◄</button>
+                        <button class="touch-btn" ontouchstart="handleTouch('down', event)" onmousedown="handleTouch('down', event)">▼</button>
+                        <button class="touch-btn" ontouchstart="handleTouch('right', event)" onmousedown="handleTouch('right', event)">►</button>
+                    </div>
+                </div>
+
+                <!-- PHOTO ALBUM SECTION with REAL PHOTOS -->
+                <div class="card" id="photoAlbum">
+                    <div class="card-header">
+                        <div class="card-title">📸 Fotoalbum & Zážitky Kiki</div>
+                    </div>
+                    <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px;">
+                        Prohlédni si opravdové fotografie ze života Kiki, jejích zelných sklizní a festivalů! Klikni na fotku pro detail. 🌸✨
+                    </p>
+
+                    <div class="photo-gallery-grid">
+
+                        <!-- Photo 1 -->
+                        <div class="photo-card" onclick="openPhotoModal(0)">
+                            <div class="photo-thumb-wrap">
+                                <img src="https://images.unsplash.com/photo-1592417817098-8f3d6ef23a81?q=80&w=800&auto=format&fit=crop" alt="Obří Zelná Sklizeň" loading="lazy">
+                                <div class="photo-overlay-badge">12. Srpna 2023</div>
                             </div>
-                            <div class="interest-card-snippet">
-                                Zalévání písničkami, sluneční paprsky a povídání s motýly...
+                            <div class="photo-info">
+                                <div class="photo-title">Obří zelná sklizeň 🥬🏆</div>
+                                <div class="photo-date">Zelná zahrádka</div>
+                            </div>
+                        </div>
+
+                        <!-- Photo 2 -->
+                        <div class="photo-card" onclick="openPhotoModal(1)">
+                            <div class="photo-thumb-wrap">
+                                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800&auto=format&fit=crop" alt="Koncert DJ Kapusty" loading="lazy">
+                                <div class="photo-overlay-badge">24. Července 2023</div>
+                            </div>
+                            <div class="photo-info">
+                                <div class="photo-title">Koncert DJ Kapusty 🎧🕺</div>
+                                <div class="photo-date">Letní festival</div>
+                            </div>
+                        </div>
+
+                        <!-- Photo 3 -->
+                        <div class="photo-card" onclick="openPhotoModal(2)">
+                            <div class="photo-thumb-wrap">
+                                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=800&auto=format&fit=crop" alt="Zahrádková Párty" loading="lazy">
+                                <div class="photo-overlay-badge">5. Června 2023</div>
+                            </div>
+                            <div class="photo-info">
+                                <div class="photo-title">Zahrádkový piknik ☀️🧺</div>
+                                <div class="photo-date">Rozkvetlá louka</div>
+                            </div>
+                        </div>
+
+                        <!-- Photo 4 -->
+                        <div class="photo-card" onclick="openPhotoModal(3)">
+                            <div class="photo-thumb-wrap">
+                                <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=800&auto=format&fit=crop" alt="Sluneční Festival" loading="lazy">
+                                <div class="photo-overlay-badge">18. Května 2023</div>
+                            </div>
+                            <div class="photo-info">
+                                <div class="photo-title">Sluneční festival 🌸👑</div>
+                                <div class="photo-date">Květinová louka</div>
                             </div>
                         </div>
 
                     </div>
                 </div>
-            </div>
 
-        </div>
-
-        <!-- Right Column -->
-        <div class="right-col">
-
-            <!-- Music Player Widget -->
-            <div class="music-player">
-                <div class="player-title">🎵 KIKI'S MYSPACE MUSIC PLAYER 🎵</div>
-                <div class="song-display">
-                    <span class="marquee-text" id="songTitle">▶ Hraje: DJ Kiki - Zelný Banger 2000 (Dancing Mix) [3:42] 🥬🎶</span>
+                <!-- About Kiki Blurb -->
+                <div class="card" id="aboutSection">
+                    <div class="card-header">
+                        <div class="card-title">💖 O mně (About Kiki)</div>
+                    </div>
+                    <p style="font-size: 13px; line-height: 1.6; color: var(--text-main); margin-bottom: 12px;">
+                        Ahojky všichni! Já jsem <strong>Kiki</strong>! 🌸✨ Jsem fialovo-růžová usměvavá kytička, která miluje život, rytmus a ze všeho nejvíce... <strong>ZELÍ! 🥬💚</strong>
+                    </p>
+                    <p style="font-size: 13px; line-height: 1.6; color: var(--text-main);">
+                        Kdykoliv hraje dobrá hudba, nemůžu zůstat v klidu a musím tancovat! Mým posláním je rozdávat všem dobrou náladu, tancovat na louce a chroupat to nejšťavnatější zelí!
+                    </p>
                 </div>
-                <div class="player-controls">
-                    <button class="player-btn" onclick="prevSong()">⏮ Prev</button>
-                    <button class="player-btn" id="playBtn" onclick="togglePlay()">⏸ Pause</button>
-                    <button class="player-btn" onclick="nextSong()">⏭ Next</button>
-                    <button class="player-btn" onclick="toggleDance()">💃 Dance Sync</button>
-                </div>
-            </div>
 
-            <!-- Photo Album - Zážitky Box (Fotoalbum Kiki) -->
-            <div class="box">
-                <div class="box-header">📸 Zážitky ze života Kiki (Fotoalbum)</div>
-                <div class="box-body">
-                    <div style="font-size: 11px; color: #666; margin-bottom: 8px;">
-                        Klikni na foto pro zobrazení vzpomínky a příběhu v plné velikosti! 🌸✨
+                <!-- Top Friends -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">👥 Top 8 Přátel Kiki</div>
                     </div>
-                    <div class="experiences-grid">
-
-                        <div class="experience-card" onclick="openExperienceModal(0)">
-                            <div class="experience-img-frame">
-                                <span class="experience-img-icon">🥬🏆</span>
-                            </div>
-                            <div class="experience-title">Obří zelná sklizeň</div>
-                            <div class="experience-date">12. Srpna 2008</div>
-                        </div>
-
-                        <div class="experience-card" onclick="openExperienceModal(1)">
-                            <div class="experience-img-frame">
-                                <span class="experience-img-icon">🎧🕺</span>
-                            </div>
-                            <div class="experience-title">Koncert DJ Kapusty</div>
-                            <div class="experience-date">24. Července 2008</div>
-                        </div>
-
-                        <div class="experience-card" onclick="openExperienceModal(2)">
-                            <div class="experience-img-frame">
-                                <span class="experience-img-icon">☀️🧺</span>
-                            </div>
-                            <div class="experience-title">Zahrádková párty</div>
-                            <div class="experience-date">5. Června 2008</div>
-                        </div>
-
-                        <div class="experience-card" onclick="openExperienceModal(3)">
-                            <div class="experience-img-frame">
-                                <span class="experience-img-icon">🌸👑</span>
-                            </div>
-                            <div class="experience-title">Sluneční festival</div>
-                            <div class="experience-date">18. Května 2008</div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- About Me / Blurbs Box -->
-            <div class="box">
-                <div class="box-header">Kikiiny Informace (About Me)</div>
-                <div class="box-body">
-
-                    <div class="blurb-title">O mně:</div>
-                    <div class="blurb-content">
-                        Ahojky všichni! Já jsem <strong>Kiki</strong>! 🌸✨<br>
-                        Jsem fialovo-růžová usměvavá kytička, která miluje život, rytmus a ze všeho nejvíce... <strong>ZELÍ! 🥬💚</strong><br><br>
-                        Kdykoliv hraje dobrá hudba, nemůžu zůstat v klidu a musím tancovat! Mám krásné velké očka, roztomilé růžové vlásky a úsměv od ucha k uchu. Mým posláním je rozdávat všem dobrou náladu, tancovat na louce a chroupat to nejšťavnatější zelí!
-                    </div>
-
-                    <div class="cabbage-badge">
-                        <span style="font-size: 24px;">🥬</span>
-                        <div>
-                            <strong>Oficiální Klub Milovníků Zelí</strong><br>
-                            <span style="font-size: 10px; font-weight: normal;">Kiki potvrzuje: "Zelí dodává tu nejlepší energii pro tancování!"</span>
-                        </div>
-                    </div>
-
-                    <div class="blurb-title" style="margin-top: 15px;">Koho bych ráda potkala:</div>
-                    <div class="blurb-content">
-                        Všechny veselé lidičky, kytičky, zeleninu a hudebníky, co rádi tancují, smějí se a mají rádi přírodu i zelí! Přidej si mě do přátel a pojďme si společně zatancovat! 💃🎶
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Top 8 Friends Box -->
-            <div class="box">
-                <div class="box-header">Kikiiných Top 8 Přátel (Top 8 Friends)</div>
-                <div class="box-body">
-                    <div class="friends-header">Kiki má <span style="color: #ff007f;">8</span> přátel v top výběru:</div>
                     <div class="friends-grid">
-
                         <div class="friend-card">
-                            <div class="friend-name">Pan Celer</div>
                             <div class="friend-avatar">🥬</div>
-                            <a href="#" onclick="alert('Pan Celer posílá pozdrav!')">Profil</a>
+                            <div class="friend-name">Pan Celer</div>
                         </div>
-
                         <div class="friend-card">
-                            <div class="friend-name">Slečna Brokolice</div>
                             <div class="friend-avatar">🥦</div>
-                            <a href="#" onclick="alert('Slečna Brokolice tancuje s Kiki!')">Profil</a>
+                            <div class="friend-name">Brokolice</div>
                         </div>
-
                         <div class="friend-card">
-                            <div class="friend-name">DJ Kapusta</div>
                             <div class="friend-avatar">🎧</div>
-                            <a href="#" onclick="alert('DJ Kapusta míchá nový zelný track!')">Profil</a>
+                            <div class="friend-name">DJ Kapusta</div>
                         </div>
-
                         <div class="friend-card">
-                            <div class="friend-name">Mrkvík</div>
                             <div class="friend-avatar">🥕</div>
-                            <a href="#" onclick="alert('Mrkvík má rád Kikiin tanec!')">Profil</a>
+                            <div class="friend-name">Mrkvík</div>
                         </div>
-
-                        <div class="friend-card">
-                            <div class="friend-name">Salátek</div>
-                            <div class="friend-avatar">🥗</div>
-                            <a href="#" onclick="alert('Salátek je nejlepší kámoš!')">Profil</a>
-                        </div>
-
-                        <div class="friend-card">
-                            <div class="friend-name">Paprička</div>
-                            <div class="friend-avatar">🌶️</div>
-                            <a href="#" onclick="alert('Paprička to umí roztočit!')">Profil</a>
-                        </div>
-
-                        <div class="friend-card">
-                            <div class="friend-name">Květák</div>
-                            <div class="friend-avatar">🪻</div>
-                            <a href="#" onclick="alert('Květák obdivuje Kikiiny barvy!')">Profil</a>
-                        </div>
-
-                        <div class="friend-card">
-                            <div class="friend-name">Ředkvička</div>
-                            <div class="friend-avatar">radish</div>
-                            <a href="#" onclick="alert('Ředkvička posílá pusu!')">Profil</a>
-                        </div>
-
                     </div>
                 </div>
-            </div>
 
-            <!-- Comments Box -->
-            <div class="box">
-                <div class="box-header">Komentáře (Comments) - Zobrazuji 3 z 148</div>
-                <div class="box-body">
-
-                    <div class="comment-item">
-                        <div class="comment-author">
-                            <div class="comment-avatar">🥬</div>
-                            Pan Celer
-                        </div>
-                        <div class="comment-text">
-                            <div class="comment-date">15. září 2008 v 14:22</div>
-                            Kiki, tvůj dnešní tanec byl naprosto fantastický! A to zelí, co jsi přinesla na párty, bylo nejsladší na světě! 🥬💃
-                        </div>
+                <!-- Comments -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">💬 Komentáře & Vzkazy</div>
                     </div>
 
                     <div class="comment-item">
-                        <div class="comment-author">
-                            <div class="comment-avatar">🎧</div>
-                            DJ Kapusta
-                        </div>
-                        <div class="comment-text">
-                            <div class="comment-date">14. září 2008 v 20:05</div>
-                            Složil jsem pro tebe nový song 'Zelný Banger'! Musíš na něj zatančit v MySpace přehrávači! 🎵🔥
+                        <div class="comment-author-avatar">🥬</div>
+                        <div class="comment-body">
+                            <div class="comment-meta">
+                                <span class="comment-name">Pan Celer</span>
+                                <span class="comment-time">Dnes v 14:22</span>
+                            </div>
+                            Kiki, tvůj dnešní tanec byl naprosto fantastický! A to zelí bylo nejsladší na světě! 🥬💃
                         </div>
                     </div>
 
                     <div class="comment-item">
-                        <div class="comment-author">
-                            <div class="comment-avatar">🥦</div>
-                            Slečna Brokolice
-                        </div>
-                        <div class="comment-text">
-                            <div class="comment-date">12. září 2008 v 09:15</div>
-                            Miluju tvoji fialovo-růžovou barvu a tvůj úsměv! Měj nádherný prosluněný den! 🌸💖
+                        <div class="comment-author-avatar">🎧</div>
+                        <div class="comment-body">
+                            <div class="comment-meta">
+                                <span class="comment-name">DJ Kapusta</span>
+                                <span class="comment-time">Včera v 20:05</span>
+                            </div>
+                            Složil jsem pro tebe nový track 'Zelný Banger'! Musíš na něj zatančit! 🎵🔥
                         </div>
                     </div>
 
-                    <div style="text-align: right; margin-top: 8px;">
-                        <a href="#" onclick="addComment()">+ Přidat komentář</a>
-                    </div>
-
+                    <button class="action-btn" style="margin-top: 10px;" onclick="addComment()">+ Napsat vzkaz pro Kiki</button>
                 </div>
-            </div>
 
-        </div>
+            </section>
+        </main>
 
+        <footer class="footer">
+            Copyright © 2023-2025 Kiki's Realm 🌸 | Vytvořeno s láskou k hudbě, tanci a zelí 🥬✨
+        </footer>
     </div>
 
-    <!-- Footer -->
-    <div class="footer">
-        Copyright © 2000-2008 MySpace.com & Kiki the Flower 🌸. Všechna práva vyhrazená.<br>
-        Vytvořeno s láskou k hudbě, tanci a zelí 🥬✨
-    </div>
-</div>
-
-<!-- Reusable Modal Popup Element -->
-<div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
-    <div class="modal-card">
-        <div class="modal-header">
-            <span id="modalTitle">Detail</span>
-            <button class="modal-close-btn" onclick="closeModal()">✕</button>
-        </div>
-        <div class="modal-body" id="modalBody">
-            <!-- Dynamic Modal Content -->
+    <!-- Reusable Modal Backdrop -->
+    <div class="modal-backdrop" id="modalBackdrop" onclick="handleModalBackdropClick(event)">
+        <div class="modal-dialog">
+            <div class="modal-dialog-header">
+                <span id="modalHeaderTitle">Detail</span>
+                <button class="modal-close" onclick="closeModal()">✕</button>
+            </div>
+            <div class="modal-dialog-body" id="modalBodyContent">
+                <!-- Content inserted dynamically -->
+            </div>
         </div>
     </div>
-</div>
 
-<script>
-    // Data structures for Interests & Experiences Modal Details
-    const interestsData = [
-        {
-            title: "🥬 Zelí & Gastronomie",
-            icon: "🥬🍲✨",
-            subtitle: "Vše o pěstování, kysání a recepty na to nejsladší zelí!",
-            text: "Kiki miluje zelí v jakékoliv podobě! Od čerstvého chroupavého hlávkového zelí přes tradiční domáci kysané až po exotické zelné smoothie. Ráda zkouší nové recepty na zelné saláty s mrkví a celerem a pečlivě studuje tajemství pěstování obřích zelných hlávek na své zahrádce. Zelí je pro ni nejen nejoblíbenějším jídlem, ale hlavně nekonečným zdrojem radosti a skvělé energie!"
-        },
-        {
-            title: "💃 Tancování & Rytmus",
-            icon: "💃🌸🎶",
-            subtitle: "Zelný vír a tanec pod sluncem od rána do večera!",
-            text: "Když zní chytlavý rytmus, Kiki prostě nedokáže zůstat v klidu! Její legendární taneční prvek se jmenuje 'Zelný vír'. Tancuje od rána do večera na rozkvetlé louce, při zalévání svých záhonků i na pódia zelných festivalů. Svým radostným tancem šíří dobrou náladu, smích a pozitivní vibrace všude tam, kam vkročí."
-        },
-        {
-            title: "🎧 Cabbage EDM & Hudba",
-            icon: "🎧🎵🔥",
-            subtitle: "Chytlavé zelný beaty od DJ Kapusty a 2000s Retro Disco!",
-            text: "Kiki je vášnivou posluchačkou i sběratelkou hudby. Její srdce bije pro Cabbage EDM, Veggie Pop i klasické 2000s Retro Disco. Ve sluchátkách jí neustále hrají čerstvé stopy od DJ Kapusty a sama ráda skládá veselé chytlavé melodie na svém MySpace profilu. Hudba dodává jejímu tanci tu nejlepší šťávu!"
-        },
-        {
-            title: "☀️ Zahrádkářství & Příroda",
-            icon: "☀️🌻🦋",
-            subtitle: "Zalévání písničkami, sluneční paprsky a povídání s motýly!",
-            text: "Kiki tráví většinu krásných dní venku na své zelném políčku a v přírodě. Miluje čerstvý ranní vzduch, hřejivé sluneční paprsky a zalévání svých rostlinek veselými písničkami. Zjistila totiž, že když zelenině při zalévání zpívá a tancuje, zelenina i květiny rostou dvakrát rychleji a jsou o dost veselejší!"
+    <!-- JavaScript Application Logic -->
+    <script>
+        /* --- 1. Glitter & Sparkle Canvas Background Particle Effect --- */
+        const glitterCanvas = document.getElementById('glitterCanvas');
+        const gCtx = glitterCanvas.getContext('2d');
+        let sparkles = [];
+
+        function resizeGlitterCanvas() {
+            glitterCanvas.width = window.innerWidth;
+            glitterCanvas.height = window.innerHeight;
         }
-    ];
+        window.addEventListener('resize', resizeGlitterCanvas);
+        resizeGlitterCanvas();
 
-    const experiencesData = [
-        {
-            title: "Obří zelná sklizeň 🥬🏆",
-            icon: "🥬👑✨",
-            date: "12. Srpna 2008",
-            subtitle: "Nejšťavnatější sklizeň sezóny 2008!",
-            text: "Dnes se na zelném políčku stal obrovský zázrak! Po třech měsících zalévání písničkami a tancování kolem záhonku vyrostla tato gigantická zelná hlávka vážící celých 10 kilogramů. Byla tak těžká, že mi s její sklizní musel pomáhat Pan Celer. Večer jsme uspořádali velký salátový večírek pro celou zahrádku!"
-        },
-        {
-            title: "Koncert DJ Kapusty 🎧🕺",
-            icon: "🎧🪩🎶",
-            date: "24. Července 2008",
-            subtitle: "Nezapomenutelná párty pod širým nebem!",
-            text: "DJ Kapusta to na letní scéně neuvěřitelně rozjel! Jeho nový track 'Zelný Banger 2000' přiměl k tanci i ty nejstydlivější květinky a zeleniny z celého okolí. Tancovala jsem v první řadě až do východu slunce a rozkopla svůj nový taneční rekrod!"
-        },
-        {
-            title: "Zahrádková párty ☀️🧺",
-            icon: "☀️🥗🥳",
-            date: "5. Června 2008",
-            subtitle: "Piknik a radovánky s Top 8 přáteli!",
-            text: "Uspořádala jsem velký Letní piknik na své rozkvetlé louce pro všechny své nejlepší kamarády! Slečna Brokolice přinesla osvěžující mátovou limonádu, Mrkvík upekl křupavý zelný koláč a tancovali jsme v kruhu za doprovodu cvrčků až do pozdního večera."
-        },
-        {
-            title: "Sluneční festival 2008 🌸👑",
-            icon: "🌸🏅✨",
-            date: "18. Května 2008",
-            subtitle: "První místo v soutěži o nejveselejší tancující kytičku!",
-            text: "Jeden z nejkrásnějších dnů mého života! Získala jsem zlatou korunku za nejlepší zelný tanec na velkém Slunečním festivalu. Všichni diváci nadšeně tleskali a házeli na pódium čerstvé zelný lístky. Zlatou trofej jsem vystavila hned u vstupu na políčko!"
+        class Sparkle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * glitterCanvas.width;
+                this.y = Math.random() * glitterCanvas.height;
+                this.size = Math.random() * 3 + 1;
+                this.maxSize = Math.random() * 4 + 2;
+                this.speed = Math.random() * 0.05 + 0.01;
+                this.alpha = Math.random();
+                this.alphaSpeed = Math.random() * 0.02 + 0.005;
+                this.color = ['#ff80ab', '#ff4081', '#ea80fc', '#b9f6ca', '#ffffff', '#ffd700'][Math.floor(Math.random() * 6)];
+            }
+            update() {
+                this.alpha += this.alphaSpeed;
+                if (this.alpha > 1 || this.alpha < 0) {
+                    this.alphaSpeed = -this.alphaSpeed;
+                }
+                this.y -= 0.3;
+                if (this.y < 0) this.y = glitterCanvas.height;
+            }
+            draw() {
+                gCtx.save();
+                gCtx.globalAlpha = Math.max(0, this.alpha);
+                gCtx.fillStyle = this.color;
+                gCtx.beginPath();
+                gCtx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                gCtx.fill();
+
+                // Draw star cross sparkle on larger sparkles
+                if (this.size > 2) {
+                    gCtx.strokeStyle = this.color;
+                    gCtx.lineWidth = 0.8;
+                    gCtx.beginPath();
+                    gCtx.moveTo(this.x - this.size * 2, this.y);
+                    gCtx.lineTo(this.x + this.size * 2, this.y);
+                    gCtx.moveTo(this.x, this.y - this.size * 2);
+                    gCtx.lineTo(this.x, this.y + this.size * 2);
+                    gCtx.stroke();
+                }
+                gCtx.restore();
+            }
         }
-    ];
 
-    // Functions to handle Modals
-    function openModal(title, contentHtml) {
-        document.getElementById('modalTitle').innerText = title;
-        document.getElementById('modalBody').innerHTML = contentHtml;
-        document.getElementById('modalOverlay').classList.add('active');
-    }
-
-    function closeModal() {
-        document.getElementById('modalOverlay').classList.remove('active');
-    }
-
-    function handleOverlayClick(event) {
-        if (event.target.id === 'modalOverlay') {
-            closeModal();
+        for (let i = 0; i < 60; i++) {
+            sparkles.push(new Sparkle());
         }
-    }
 
-    // Escape key listener for Modal
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape') {
-            closeModal();
+        function animateGlitter() {
+            gCtx.clearRect(0, 0, glitterCanvas.width, glitterCanvas.height);
+            sparkles.forEach(s => {
+                s.update();
+                s.draw();
+            });
+            requestAnimationFrame(animateGlitter);
         }
-    });
+        animateGlitter();
 
-    function openInterestModal(index) {
-        const item = interestsData[index];
-        const content = `
-            <div class="modal-hero-box">
-                <div class="modal-hero-icon">${item.icon}</div>
-                <div class="modal-hero-subtitle">${item.subtitle}</div>
-            </div>
-            <p style="font-size: 12px; line-height: 1.6; color: #444;">${item.text}</p>
-        `;
-        openModal(item.title, content);
-    }
+        /* --- 2. Interactive Character Dance & Music Player --- */
+        let isDancing = false;
+        function toggleDance() {
+            const kikiSvg = document.getElementById('kikiSvg');
+            const danceBtn = document.getElementById('danceBtn');
+            isDancing = !isDancing;
 
-    function openExperienceModal(index) {
-        const item = experiencesData[index];
-        const content = `
-            <div class="modal-hero-box">
-                <div class="modal-hero-icon">${item.icon}</div>
-                <div style="font-size: 10px; color: #888; margin-bottom: 2px;">📅 ${item.date}</div>
-                <div class="modal-hero-subtitle">${item.subtitle}</div>
-            </div>
-            <p style="font-size: 12px; line-height: 1.6; color: #444;">${item.text}</p>
-        `;
-        openModal(item.title, content);
-    }
+            if (isDancing) {
+                kikiSvg.classList.add('dancing');
+                danceBtn.innerHTML = '🛑 Zastavit Tanec Kiki';
+                danceBtn.style.background = 'linear-gradient(135deg, #e53935 0%, #b71c1c 100%)';
+            } else {
+                kikiSvg.classList.remove('dancing');
+                danceBtn.innerHTML = '💃 Spustit Tanec Kiki ✨';
+                danceBtn.style.background = 'linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%)';
+            }
+        }
 
-    // Function for Copying Profile Link
-    function copyProfileLink() {
-        const profileUrl = "http://www.myspace.com/kiki_zelna_kyticka";
-        navigator.clipboard.writeText(profileUrl).then(() => {
-            alert(" Odkaz na profil Kiki byl zkopírován do schránky! 🌸✨\n\nSdílej ho se svými přáteli!");
-        }).catch(() => {
-            alert("Odkaz na profil Kiki:\n" + profileUrl);
+        const songs = [
+            "▶ Hraje: DJ Kiki - Zelný Banger 2000 (Dancing Mix) [3:42] 🥬🎶",
+            "▶ Hraje: Kapusta Beats - Tancuj Kiki Tancuj ft. Pan Celer [2:55] 💃🎵",
+            "▶ Hraje: Kytičkový Orchestr - Ploužák v Zelném Políčku [4:10] 🌸🎼"
+        ];
+        let currentSongIndex = 0;
+        let isPlaying = true;
+
+        function togglePlay() {
+            const playBtn = document.getElementById('playBtn');
+            isPlaying = !isPlaying;
+            playBtn.innerText = isPlaying ? '⏸ Pauza' : '▶ Přehraj';
+        }
+
+        function nextSong() {
+            currentSongIndex = (currentSongIndex + 1) % songs.length;
+            document.getElementById('songTitle').innerText = songs[currentSongIndex];
+        }
+
+        function prevSong() {
+            currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+            document.getElementById('songTitle').innerText = songs[currentSongIndex];
+        }
+
+        /* --- 3. Modal Dialog Functionality --- */
+        const photoData = [
+            {
+                title: "Obří zelná sklizeň 🥬🏆",
+                date: "12. Srpna 2023 • Zelná zahrádka",
+                img: "https://images.unsplash.com/photo-1592417817098-8f3d6ef23a81?q=80&w=800&auto=format&fit=crop",
+                text: "Dnes se na zelném políčku stal obrovský zázrak! Po několika měsících pečlivého zalévání písničkami vyrostly tyto nádherné, hlávky čerstvého zelí. Uspořádali jsme velkou oslavu sklizně pro všechny sousedy a kamarády!"
+            },
+            {
+                title: "Koncert DJ Kapusty 🎧🕺",
+                date: "24. Července 2023 • Letní festival",
+                img: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800&auto=format&fit=crop",
+                text: "DJ Kapusta to na letní scéně neuvěřitelně rozjel! Jeho nový track 'Zelný Banger' přiměl k tanci i ty nejstydlivější květinky. Tancovali jsme v první řadě pod světelnou šou až do samého rána!"
+            },
+            {
+                title: "Zahrádkový piknik ☀️🧺",
+                date: "5. Června 2023 • Rozkvetlá louka",
+                img: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=800&auto=format&fit=crop",
+                text: "Krásný slunečný piknik s nejlepšími přáteli pod širým nebem. Slečna Brokolice přinesla osvěžující limonádu a Mrkvík upekl křupavý zelný koláč. Smáli jsme se a užívali si sluneční paprsky."
+            },
+            {
+                title: "Sluneční festival 🌸👑",
+                date: "18. Května 2023 • Květinová louka",
+                img: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=800&auto=format&fit=crop",
+                text: "Jeden z nejkrásnějších dní v roce! Květinová louka rozkvetla tisíci barvami a včelky i motýli tancovali v hřejivém větru. Kiki si odnesla korunku za nejsvětlejší úsměv festivalu!"
+            }
+        ];
+
+        const interestsData = [
+            {
+                title: "🥬 Zelí & Gastronomie",
+                text: "Kiki miluje zelí v jakékoliv podobě! Od čerstvého chroupavého hlávkového zelí přes tradiční domáci kysané až po exotické zelné smoothie. Ráda zkouší nové recepty a pečlivě pečuje o záhonky."
+            },
+            {
+                title: "💃 Tancování & Rytmus",
+                text: "Když zní chytlavý rytmus, Kiki prostě nedokáže zůstat v klidu! Její legendární taneční prvek se jmenuje 'Zelný vír'. Tancuje od rána do večera na rozkvetlé louce a šíří dobrou náladu."
+            },
+            {
+                title: "🎧 Cabbage EDM & Hudba",
+                text: "Kiki je vášnivou posluchačkou i sběratelkou hudby. Její srdce bije pro Cabbage EDM, Veggie Pop i klasické disco. Ve sluchátkách jí neustále hrají čerstvé stopy od DJ Kapusty."
+            }
+        ];
+
+        function openModal(title, htmlContent) {
+            document.getElementById('modalHeaderTitle').innerText = title;
+            document.getElementById('modalBodyContent').innerHTML = htmlContent;
+            document.getElementById('modalBackdrop').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('modalBackdrop').classList.remove('active');
+        }
+
+        function handleModalBackdropClick(e) {
+            if (e.target.id === 'modalBackdrop') {
+                closeModal();
+            }
+        }
+
+        function openPhotoModal(idx) {
+            const item = photoData[idx];
+            const content = `
+                <img src="${item.img}" class="modal-img-preview" alt="${item.title}">
+                <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px;">📅 ${item.date}</div>
+                <p style="font-size: 13px; line-height: 1.6; color: #333;">${item.text}</p>
+            `;
+            openModal(item.title, content);
+        }
+
+        function openInterestModal(idx) {
+            const item = interestsData[idx];
+            const content = `
+                <p style="font-size: 14px; line-height: 1.6; color: #333; margin-top: 10px;">${item.text}</p>
+            `;
+            openModal(item.title, content);
+        }
+
+        function copyProfileLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                alert("Odkaz na profil Kiki byl zkopírován do schránky! 🌸✨");
+            }).catch(() => {
+                alert("Profil Kiki: " + window.location.href);
+            });
+        }
+
+        function addComment() {
+            const msg = prompt("Napiš vzkaz pro Kiki:");
+            if (msg) {
+                alert("Děkujeme za milý vzkaz! Kiki z něj má obrovskou radost! 🌸✨");
+            }
+        }
+
+        /* --- 4. Interactive HTML5 Canvas Game: Kiki sbírá zelí --- */
+        const gameCanvas = document.getElementById('gameCanvas');
+        const ctx = gameCanvas.getContext('2d');
+
+        let gameRunning = false;
+        let score = 0;
+        let lives = 3;
+        let highScore = localStorage.getItem('kiki_cabbage_highscore') || 0;
+        document.getElementById('highScoreVal').innerText = highScore;
+
+        // Player (Kiki)
+        const player = {
+            x: 280,
+            y: 160,
+            width: 36,
+            height: 36,
+            speed: 4,
+            dx: 0,
+            dy: 0,
+            color: '#e6007e'
+        };
+
+        let cabbages = [];
+        let pests = []; // Bugs / Caterpillar enemies
+        let sparklesFx = [];
+
+        // Controls state
+        const keys = {
+            ArrowUp: false,
+            ArrowDown: false,
+            ArrowLeft: false,
+            ArrowRight: false,
+            w: false,
+            s: false,
+            a: false,
+            d: false
+        };
+
+        window.addEventListener('keydown', (e) => {
+            if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'w', 's', 'a', 'd'].includes(e.key)) {
+                keys[e.key] = true;
+            }
         });
-    }
 
-    // JavaScript Functionality for Interactive Dance Mode & Music Player
-    let isDancing = false;
-    let isPlaying = true;
-    let currentSongIndex = 0;
+        window.addEventListener('keyup', (e) => {
+            if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'w', 's', 'a', 'd'].includes(e.key)) {
+                keys[e.key] = false;
+            }
+        });
 
-    const songs = [
-        "▶ Hraje: DJ Kiki - Zelný Banger 2000 (Dancing Mix) [3:42] 🥬🎶",
-        "▶ Hraje: Kapusta Beats - Tancuj Kiki Tancuj ft. Pan Celer [2:55] 💃🎵",
-        "▶ Hraje: Kytičkový Orchestr - Ploužák v Zelném Políčku [4:10] 🌸🎼"
-    ];
-
-    function toggleDance() {
-        const kikiSvg = document.getElementById('kikiSvg');
-        const characterCard = document.getElementById('characterCard');
-        const danceBtn = document.getElementById('danceBtn');
-        const danceStatus = document.getElementById('danceStatus');
-
-        isDancing = !isDancing;
-
-        if (isDancing) {
-            kikiSvg.classList.add('dancing');
-            characterCard.classList.add('dancing-active');
-            danceBtn.innerHTML = '🛑 Zastavit Tanec';
-            danceBtn.style.background = 'linear-gradient(180deg, #ff0000 0%, #990000 100%)';
-            danceStatus.innerHTML = '✨ KIKI PRÁVĚ TANCUJE DO RYTMU ZELÍ! 💃🥬✨';
-        } else {
-            kikiSvg.classList.remove('dancing');
-            characterCard.classList.remove('dancing-active');
-            danceBtn.innerHTML = '💃 Zapnout Tanec Kiki! 🎶';
-            danceBtn.style.background = 'linear-gradient(180deg, #ff3399 0%, #b30059 100%)';
-            danceStatus.innerHTML = 'Klikni a sleduj, jak Kiki tancuje!';
+        function handleTouch(dir, e) {
+            e.preventDefault();
+            if (!gameRunning) return;
+            const step = 20;
+            if (dir === 'up') player.y = Math.max(0, player.y - step);
+            if (dir === 'down') player.y = Math.min(gameCanvas.height - player.height, player.y + step);
+            if (dir === 'left') player.x = Math.max(0, player.x - step);
+            if (dir === 'right') player.x = Math.min(gameCanvas.width - player.width, player.x + step);
         }
-    }
 
-    // Interactive SVG Click
-    document.getElementById('kikiContainer').addEventListener('click', function(e) {
-        if (e.target.tagName !== 'BUTTON') {
-            toggleDance();
+        // Allow clicking on bugs to eliminate them directly!
+        gameCanvas.addEventListener('mousedown', (e) => {
+            if (!gameRunning) return;
+            const rect = gameCanvas.getBoundingClientRect();
+            const clickX = (e.clientX - rect.left) * (gameCanvas.width / rect.width);
+            const clickY = (e.clientY - rect.top) * (gameCanvas.height / rect.height);
+
+            pests.forEach((pest, index) => {
+                const dist = Math.hypot(clickX - (pest.x + pest.width/2), clickY - (pest.y + pest.height/2));
+                if (dist < 28) {
+                    // Eliminate pest!
+                    pests.splice(index, 1);
+                    createSparkleEffect(pest.x, pest.y, '#00e676');
+                    score += 5;
+                    updateHUD();
+                }
+            });
+        });
+
+        function spawnCabbage() {
+            cabbages.push({
+                x: Math.random() * (gameCanvas.width - 30),
+                y: Math.random() * (gameCanvas.height - 30),
+                width: 28,
+                height: 28,
+                pulse: 0
+            });
         }
-    });
 
-    // Music Player controls
-    function togglePlay() {
-        const playBtn = document.getElementById('playBtn');
-        isPlaying = !isPlaying;
-        if (isPlaying) {
-            playBtn.innerText = '⏸ Pause';
-        } else {
-            playBtn.innerText = '▶ Play';
+        function spawnPest() {
+            const types = ['🪲', '🐛', '🕷️'];
+            pests.push({
+                x: Math.random() * (gameCanvas.width - 30),
+                y: Math.random() * (gameCanvas.height - 30),
+                width: 26,
+                height: 26,
+                dx: (Math.random() - 0.5) * 3,
+                dy: (Math.random() - 0.5) * 3,
+                type: types[Math.floor(Math.random() * types.length)]
+            });
         }
-    }
 
-    function nextSong() {
-        currentSongIndex = (currentSongIndex + 1) % songs.length;
-        document.getElementById('songTitle').innerText = songs[currentSongIndex];
-    }
-
-    function prevSong() {
-        currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
-        document.getElementById('songTitle').innerText = songs[currentSongIndex];
-    }
-
-    function addComment() {
-        const commentText = prompt('Napiš Kiki vzkaz nebo pochvalu za její zelí:');
-        if (commentText) {
-            alert('Děkujeme za komentář! Kiki z toho má velkou radost a tancuje! 🌸💃');
-            if (!isDancing) toggleDance();
+        function createSparkleEffect(x, y, color) {
+            for (let i = 0; i < 10; i++) {
+                sparklesFx.push({
+                    x: x,
+                    y: y,
+                    dx: (Math.random() - 0.5) * 4,
+                    dy: (Math.random() - 0.5) * 4,
+                    life: 20,
+                    color: color
+                });
+            }
         }
-    }
-</script>
 
+        function updateHUD() {
+            document.getElementById('scoreVal').innerText = score;
+            let heartsStr = '';
+            for (let i = 0; i < lives; i++) heartsStr += '❤️';
+            document.getElementById('heartsContainer').innerText = heartsStr || '💀';
+
+            if (score > highScore) {
+                highScore = score;
+                localStorage.setItem('kiki_cabbage_highscore', highScore);
+                document.getElementById('highScoreVal').innerText = highScore;
+            }
+        }
+
+        function startGame() {
+            score = 0;
+            lives = 3;
+            player.x = gameCanvas.width / 2 - 18;
+            player.y = gameCanvas.height / 2 - 18;
+            cabbages = [];
+            pests = [];
+            sparklesFx = [];
+
+            for (let i = 0; i < 4; i++) spawnCabbage();
+            for (let i = 0; i < 3; i++) spawnPest();
+
+            updateHUD();
+            document.getElementById('gameOverlay').style.display = 'none';
+            gameRunning = true;
+            requestAnimationFrame(gameLoop);
+        }
+
+        function gameOver() {
+            gameRunning = false;
+            document.getElementById('overlayTitle').innerText = 'Konec Hry! 🥺';
+            document.getElementById('overlayTitle').style.color = '#ff4081';
+            document.getElementById('overlayDesc').innerHTML = `Získal/a jsi celkem <strong>${score}</strong> bodů! Váš nejlepší rekord je ${highScore}. Zkuste to znovu!`;
+            document.getElementById('gameOverlay').style.display = 'flex';
+        }
+
+        function gameLoop() {
+            if (!gameRunning) return;
+
+            // Player Movement
+            player.dx = 0;
+            player.dy = 0;
+            if (keys.ArrowUp || keys.w) player.dy = -player.speed;
+            if (keys.ArrowDown || keys.s) player.dy = player.speed;
+            if (keys.ArrowLeft || keys.a) player.dx = -player.speed;
+            if (keys.ArrowRight || keys.d) player.dx = player.speed;
+
+            player.x = Math.max(0, Math.min(gameCanvas.width - player.width, player.x + player.dx));
+            player.y = Math.max(0, Math.min(gameCanvas.height - player.height, player.y + player.dy));
+
+            // Clear Canvas
+            ctx.fillStyle = '#233d27';
+            ctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
+
+            // Draw Subtle Grid Pattern on Grass
+            ctx.strokeStyle = '#2b4a30';
+            ctx.lineWidth = 1;
+            for (let x = 0; x < gameCanvas.width; x += 40) {
+                ctx.beginPath();
+                ctx.moveTo(x, 0); ctx.lineTo(x, gameCanvas.height);
+                ctx.stroke();
+            }
+            for (let y = 0; y < gameCanvas.height; y += 40) {
+                ctx.beginPath();
+                ctx.moveTo(0, y); ctx.lineTo(gameCanvas.width, y);
+                ctx.stroke();
+            }
+
+            // Draw Cabbages
+            cabbages.forEach((cab, i) => {
+                cab.pulse += 0.05;
+                const scale = 1 + Math.sin(cab.pulse) * 0.08;
+
+                ctx.save();
+                ctx.font = `${22 * scale}px sans-serif`;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText('🥬', cab.x + 14, cab.y + 14);
+                ctx.restore();
+
+                // Collision with player
+                if (
+                    player.x < cab.x + cab.width &&
+                    player.x + player.width > cab.x &&
+                    player.y < cab.y + cab.height &&
+                    player.y + player.height > cab.y
+                ) {
+                    cabbages.splice(i, 1);
+                    score += 10;
+                    createSparkleEffect(cab.x + 14, cab.y + 14, '#ff80ab');
+                    updateHUD();
+                    spawnCabbage();
+
+                    // Periodically spawn new pest when score increases
+                    if (score % 30 === 0 && pests.length < 7) {
+                        spawnPest();
+                    }
+                }
+            });
+
+            // Draw & Update Pests (Bugs)
+            pests.forEach((pest, i) => {
+                pest.x += pest.dx;
+                pest.y += pest.dy;
+
+                // Bounce off canvas boundaries
+                if (pest.x <= 0 || pest.x >= gameCanvas.width - pest.width) pest.dx = -pest.dx;
+                if (pest.y <= 0 || pest.y >= gameCanvas.height - pest.height) pest.dy = -pest.dy;
+
+                ctx.font = '22px sans-serif';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(pest.type, pest.x + 13, pest.y + 13);
+
+                // Collision with player -> Lose heart!
+                if (
+                    player.x < pest.x + pest.width &&
+                    player.x + player.width > pest.x &&
+                    player.y < pest.y + pest.height &&
+                    player.y + player.height > pest.y
+                ) {
+                    pests.splice(i, 1);
+                    lives--;
+                    createSparkleEffect(player.x + 18, player.y + 18, '#ff1744');
+                    updateHUD();
+
+                    if (lives <= 0) {
+                        gameOver();
+                        return;
+                    } else {
+                        // Respawn new pest to keep pressure
+                        spawnPest();
+                    }
+                }
+            });
+
+            // Draw Sparkle Effects
+            sparklesFx.forEach((sp, i) => {
+                sp.x += sp.dx;
+                sp.y += sp.dy;
+                sp.life--;
+                ctx.fillStyle = sp.color;
+                ctx.beginPath();
+                ctx.arc(sp.x, sp.y, Math.max(1, sp.life / 4), 0, Math.PI * 2);
+                ctx.fill();
+
+                if (sp.life <= 0) sparklesFx.splice(i, 1);
+            });
+
+            // Draw Player (Kiki)
+            ctx.save();
+            ctx.font = '30px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('🌸', player.x + 18, player.y + 18);
+            ctx.restore();
+
+            requestAnimationFrame(gameLoop);
+        }
+    </script>
 </body>
 </html>
